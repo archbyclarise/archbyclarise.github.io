@@ -11,18 +11,33 @@
   /* ─── TOKENS ──────────────────────────────────────────── */
   :root {
     --cream:   #F5F1EC;
+     --cream-dark:   #1A1410;
     --parchment: #EDE8DF;
     --sand:    #D9CEBB;
     --stone:   #9E9082;
-   --umber:   #C4A882;
-     --espresso:#E8DDD0;
+    --umber:   #C4A882;
+    --espresso:#E8DDD0;
+    --espresso-dark:#2E2018;
     --ink:     #F5F0E8;
+    --ink-dark:     #1A1410;
     --white:   #FDFCFA;
     --accent:  #8B6F4E;
 
     --nav-h: 72px;
     --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  [data-theme="dark"] {
+    --cream:   #1A1410;
+    --parchment: #231C15;
+    --sand:    #3A2E22;
+    --stone:   #7A6A5A;
+    --umber:   #C4A882;
+    --espresso:#E8DDD0;
+    --ink:     #F5F0E8;
+    --white:   #201810;
+    --accent:  #C4A882;
   }
 
   /* ─── RESET ───────────────────────────────────────────── */
@@ -348,7 +363,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 300;
-    color: var(--ink);
+    color: var(--ink-dark);
     letter-spacing: -0.01em;
     line-height: 1.05;
   }
@@ -428,7 +443,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
     font-weight: 400;
-    color: var(--ink);
+    color: var(--ink-dark);
     line-height: 1.2;
   }
   .proj-card__desc {
@@ -526,7 +541,7 @@
   }
   .modal-meta-item { }
   .modal-meta-item .label { font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:4px; }
-  .modal-meta-item .value { font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink); }
+  .modal-meta-item .value { font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink-dark); }
 
   .modal-title {
     font-family: 'Cormorant Garamond', serif;
@@ -592,7 +607,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 300;
-    color: var(--cream);
+    color: var(--cream-dark);
     line-height: 1;
   }
   .stat-label {
@@ -916,7 +931,7 @@
   .loader {
     position: fixed;
     inset: 0;
-    background: var(--espresso);
+    background: var(--espresso-dark);
     z-index: 9999;
     display: flex;
     flex-direction: column;
