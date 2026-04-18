@@ -14,7 +14,9 @@
      --cream-dark:   #1A1410;
     --parchment: #EDE8DF;
     --sand:    #D9CEBB;
+     --sand-dark:    #3A2E22;
     --stone:   #9E9082;
+     --stone-dark:   #7A6A5A;
     --umber:   #C4A882;
     --espresso:#E8DDD0;
     --espresso-dark:#2E2018;
@@ -95,13 +97,10 @@
     transition: background 0.5s var(--ease), backdrop-filter 0.5s, box-shadow 0.5s;
   }
   nav.scrolled {
-    background: rgba(245,241,236,0.92);
+    background: rgba(26,20,16,0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 1px 0 rgba(92,74,56,0.08);
-  }
-  [data-theme="dark"] nav.scrolled {
-    background: rgba(26,20,16,0.92);
   }
 
   .nav-logo {
@@ -184,7 +183,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: var(--cream);
+    background: var(--cream-dark);
     z-index: 999;
     flex-direction: column;
     align-items: center;
@@ -334,6 +333,8 @@
     background: rgba(237,232,223,0.3);
     animation: scrollPulse 2s ease-in-out infinite;
   }
+
+  
   @keyframes scrollPulse {
     0%,100%{opacity:0.3;transform:scaleY(1)}
     50%{opacity:0.8;transform:scaleY(0.6)}
@@ -458,7 +459,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 300;
-    color: var(--sand);
+    color: var(--sand-dark);
     white-space: nowrap;
     line-height: 1;
     align-self: flex-end;
@@ -752,7 +753,7 @@
     font-size: 1.4rem;
     font-weight: 300;
     font-style: italic;
-    color: var(--ink);
+    color: var(--ink-dark);
     line-height: 1.5;
   }
 
@@ -793,7 +794,7 @@
     gap: clamp(40px, 6vw, 100px);
     align-items: start;
   }
-  .contact-left .section-title { color: var(--cream); margin-bottom: 16px; }
+  .contact-left .section-title { color: var(--cream-dark); margin-bottom: 16px; }
   .contact-left .t-body { color: var(--stone); margin-bottom: 36px; }
 
   .contact-info { display: flex; flex-direction: column; gap: 20px; }
@@ -801,13 +802,13 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    color: rgba(237,232,223,0.7);
+    color: var(--cream-dark);
     font-size: 0.85rem;
     font-weight: 300;
     letter-spacing: 0.05em;
     transition: color 0.3s;
   }
-  .contact-link:hover { color: var(--cream); }
+  .contact-link:hover { color: var(--cream-dark); }
   .contact-link-icon {
     width: 36px; height: 36px;
     border: 1px solid rgba(237,232,223,0.2);
@@ -817,7 +818,7 @@
     transition: border-color 0.3s, background 0.3s;
   }
   .contact-link:hover .contact-link-icon {
-    border-color: var(--accent);
+    border-color: var(--cream-dark);
     background: rgba(139,111,78,0.15);
   }
 
@@ -832,9 +833,9 @@
   }
   .form-input, .form-textarea {
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(237,232,223,0.15);
+    border: 1px solid var(--cream-dark);
     padding: 14px 16px;
-    color: var(--cream);
+    color: var(--cream-dark);
     font-family: 'Jost', sans-serif;
     font-size: 0.88rem;
     font-weight: 300;
@@ -913,7 +914,7 @@
     .hamburger { display: flex; }
     .hero-content { grid-template-columns: 1fr; }
     .hero-meta { flex-direction: row; align-items: flex-end; }
-    .hero-year { writing-mode: horizontal-tb; transform: none; }
+    .hero-year { writing-mode: horizontal-tb; transform: none; margin-bottom: 10px; }
     .proj-card--third  { grid-column: span 12; }
     .proj-card--wide .proj-card__img { aspect-ratio: 4/3; }
     .manual-feature { grid-template-columns: 1fr; }
@@ -1007,10 +1008,10 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
-   <!-- <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☽</button> -->
     <button class="hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
+     <button class="theme-toggle" style="display: none;" id="themeToggle" aria-label="Toggle theme">☽</button>
   </div>
 </nav>
 
@@ -1349,10 +1350,10 @@
   <div class="contact-grid">
     <div class="contact-left reveal">
       <p class="t-label" style="color:var(--stone);margin-bottom:16px;">04 — Get in Touch</p>
-      <h2 class="section-title" style="color:var(--cream);margin-bottom:20px;">
+      <h2 class="section-title" style="color:var(--cream-dark);margin-bottom:20px;">
         Let's Build<br><em style="color:var(--accent)">Something</em>
       </h2>
-      <p class="t-body" style="color:var(--stone);margin-bottom:40px;">
+      <p class="t-body" style="color:var( --stone-dark);margin-bottom:40px;">
         Open to architectural collaborations, design commissions, and professional opportunities.
         Based in Quezon City, Philippines — available for both local and international projects.
       </p>
