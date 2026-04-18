@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarise M. Lutiva — Architectural Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ─── TOKENS ──────────────────────────────────────────── */
+  :root {
+    --cream:   #F5F1EC;
+    --parchment: #EDE8DF;
+    --sand:    #D9CEBB;
+    --stone:   #9E9082;
+    --umber:   #5C4A38;
+    --espresso:#2E2018;
+    --ink:     #1A1410;
+    --white:   #FDFCFA;
+    --accent:  #8B6F4E;
+
+    --nav-h: 72px;
+    --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  [data-theme="dark"] {
+    --cream:   #1A1410;
+    --parchment: #231C15;
+    --sand:    #3A2E22;
+    --stone:   #7A6A5A;
+    --umber:   #C4A882;
+    --espresso:#E8DDD0;
+    --ink:     #F5F0E8;
+    --white:   #201810;
+    --accent:  #C4A882;
+  }
+
+  /* ─── RESET ───────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    transition: background 0.4s var(--ease), color 0.4s var(--ease);
+    overflow-x: hidden;
+  }
+  img { display: block; width: 100%; object-fit: cover; }
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; border: none; background: none; }
+
+  /* ─── TYPOGRAPHY ──────────────────────────────────────── */
+  .t-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .t-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  .t-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+  .t-body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--stone);
+  }
+
+  /* ─── NAV ─────────────────────────────────────────────── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(24px, 5vw, 80px);
+    transition: background 0.5s var(--ease), backdrop-filter 0.5s, box-shadow 0.5s;
+  }
+  nav.scrolled {
+    background: rgba(245,241,236,0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0 rgba(92,74,56,0.08);
+  }
+  [data-theme="dark"] nav.scrolled {
+    background: rgba(26,20,16,0.92);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo-mark {
+    width: 32px; height: 32px;
+    border: 1.5px solid var(--umber);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--umber);
+    font-weight: 500;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 3vw, 48px);
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.72rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    position: relative;
+    opacity: 0.75;
+    transition: opacity 0.3s;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: var(--accent);
+    transition: width 0.4s var(--ease);
+  }
+  .nav-links a:hover { opacity: 1; }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+
+  .theme-toggle {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--sand);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    font-size: 0.85rem;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .theme-toggle:hover { background: var(--sand); }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px; height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.4s var(--ease), opacity 0.3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--cream);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s var(--ease);
+  }
+  .mobile-menu.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── HERO ────────────────────────────────────────────── */
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(40px, 8vh, 100px) clamp(24px, 5vw, 80px);
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(26,20,16,0.18) 0%, rgba(26,20,16,0.0) 40%, rgba(26,20,16,0.65) 100%),
+      url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1800&q=80') center/cover no-repeat;
+    transform: scale(1.05);
+    transition: transform 8s ease-out;
+  }
+  .hero-bg.loaded { transform: scale(1); }
+
+  /* Decorative grid lines */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-end;
+    gap: 40px;
+    width: 100%;
+  }
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(237,232,223,0.7);
+    font-weight: 300;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: rgba(237,232,223,0.5);
+  }
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(3.5rem, 9vw, 9rem);
+    line-height: 0.9;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: rgba(237,232,223,0.75);
+  }
+  .hero-subtitle {
+    margin-top: 24px;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(237,232,223,0.6);
+    font-weight: 300;
+  }
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+  .hero-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: rgba(237,232,223,0.5);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  .scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(237,232,223,0.45);
+    font-weight: 300;
+  }
+  .scroll-hint-line {
+    width: 1px; height: 40px;
+    background: rgba(237,232,223,0.3);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%,100%{opacity:0.3;transform:scaleY(1)}
+    50%{opacity:0.8;transform:scaleY(0.6)}
+  }
+
+  /* ─── SECTION UTILS ───────────────────────────────────── */
+  section { padding: clamp(80px, 12vh, 140px) clamp(24px, 5vw, 80px); }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: clamp(48px, 8vh, 80px);
+  }
+  .section-header-line {
+    height: 1px;
+    background: var(--sand);
+  }
+  .section-number {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--stone);
+    font-weight: 300;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 300;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+  .section-title em { font-style: italic; color: var(--accent); }
+
+  /* ─── REVEAL ANIMATIONS ───────────────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ─── FEATURED PROJECTS ───────────────────────────────── */
+  #projects { background: var(--cream); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    row-gap: 24px;
+  }
+
+  .proj-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--parchment);
+  }
+  .proj-card--large  { grid-column: span 7; }
+  .proj-card--medium { grid-column: span 5; }
+  .proj-card--wide   { grid-column: span 12; }
+  .proj-card--third  { grid-column: span 4; }
+
+  .proj-card__img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+  .proj-card--large .proj-card__img  { aspect-ratio: 16/10; }
+  .proj-card--wide .proj-card__img   { aspect-ratio: 21/8; }
+
+  .proj-card__img img {
+    height: 100%;
+    transition: transform 0.8s var(--ease-out);
+  }
+  .proj-card:hover .proj-card__img img {
+    transform: scale(1.06);
+  }
+
+  .proj-card__info {
+    padding: 20px 22px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--parchment);
+    transition: background 0.3s;
+  }
+  .proj-card:hover .proj-card__info { background: var(--sand); }
+
+  .proj-card__tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  .proj-card__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .proj-card__desc {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--stone);
+    line-height: 1.6;
+    margin-top: 4px;
+    max-width: 260px;
+  }
+  .proj-card__year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--sand);
+    white-space: nowrap;
+    line-height: 1;
+    align-self: flex-end;
+  }
+
+  /* Overlay on hover */
+  .proj-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(46,32,24,0.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s var(--ease);
+    pointer-events: none;
+  }
+  .proj-card:hover .proj-card__overlay {
+    background: rgba(46,32,24,0.08);
+  }
+
+  /* ─── PROJECT MODAL ───────────────────────────────────── */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,20,16,0.85);
+    z-index: 2000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s var(--ease);
+    overflow-y: auto;
+    padding: 40px 16px;
+  }
+  .modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .modal {
+    background: var(--cream);
+    width: 100%;
+    max-width: 1100px;
+    transform: translateY(40px);
+    transition: transform 0.5s var(--ease-out);
+  }
+  .modal-overlay.open .modal { transform: translateY(0); }
+
+  .modal-banner {
+    width: 100%;
+    height: clamp(240px, 40vw, 520px);
+    overflow: hidden;
+    position: relative;
+  }
+  .modal-banner img { height: 100%; object-fit: cover; }
+  .modal-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 44px; height: 44px;
+    background: rgba(245,241,236,0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;align-items:center;justify-content:center;
+    font-size: 1.1rem;
+    color: var(--ink);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+  }
+  .modal-close:hover { background: var(--sand); }
+
+  .modal-body {
+    padding: clamp(32px, 5vw, 64px);
+  }
+  .modal-meta {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .modal-meta-item { }
+  .modal-meta-item .label { font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:4px; }
+  .modal-meta-item .value { font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink); }
+
+  .modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  .modal-subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  .modal-desc {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--stone);
+    max-width: 680px;
+    margin-bottom: 40px;
+  }
+
+  .modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  .modal-gallery img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+  }
+
+  .modal-tools {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tool-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--sand);
+    color: var(--stone);
+    font-weight: 300;
+  }
+
+  /* ─── STATS BAR ───────────────────────────────────────── */
+  .stats-bar {
+    background: var(--espresso);
+    padding: 48px clamp(24px, 5vw, 80px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .stat-item { text-align: center; }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-top: 8px;
+    font-weight: 300;
+  }
+
+  /* ─── MANUAL WORKS ────────────────────────────────────── */
+  #manual { background: var(--parchment); }
+
+  .manual-intro {
+    max-width: 580px;
+    margin-bottom: clamp(48px, 8vh, 80px);
+  }
+  .manual-intro .section-title { margin-bottom: 16px; }
+
+  .manual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 22vw, 300px), 1fr));
+    gap: 16px;
+  }
+  .manual-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--cream);
+    cursor: pointer;
+  }
+  .manual-card__img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+  .manual-card__img img {
+    height: 100%;
+    filter: sepia(15%) contrast(0.92) brightness(1.04);
+    transition: transform 0.7s var(--ease-out), filter 0.4s;
+  }
+  .manual-card:hover .manual-card__img img {
+    transform: scale(1.07);
+    filter: sepia(0%) contrast(1) brightness(1);
+  }
+  .manual-card__label {
+    padding: 12px 16px;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone);
+    font-weight: 300;
+    background: var(--cream);
+  }
+
+  .manual-feature {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .manual-feature .manual-card__img { aspect-ratio: 16/9; }
+
+  /* ─── ABOUT ───────────────────────────────────────────── */
+  #about { background: var(--cream); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(40px, 6vw, 100px);
+    align-items: start;
+  }
+  .about-image-wrap {
+    position: relative;
+  }
+  .about-image-wrap::before {
+    content: '';
+    position: absolute;
+    top: -16px; left: -16px;
+    right: 16px; bottom: 16px;
+    border: 1px solid var(--sand);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .about-image-wrap img {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .about-text { padding-top: 12px; }
+  .about-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 400;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .about-tag::before {
+    content: '';
+    display: block;
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+
+  .about-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .about-title-sub {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone);
+    font-weight: 300;
+    margin-bottom: 36px;
+  }
+  .about-bio {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--stone);
+    margin-bottom: 28px;
+  }
+  .about-philosophy {
+    border-left: 2px solid var(--accent);
+    padding-left: 24px;
+    margin: 32px 0;
+  }
+  .about-philosophy p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  .about-skills {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 24px;
+  }
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--stone);
+    letter-spacing: 0.05em;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--sand);
+  }
+  .skill-item::before {
+    content: '';
+    display: block;
+    width: 4px; height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ─── CONTACT ─────────────────────────────────────────── */
+  #contact {
+    background: var(--espresso);
+    padding: clamp(80px, 12vh, 140px) clamp(24px, 5vw, 80px);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 100px);
+    align-items: start;
+  }
+  .contact-left .section-title { color: var(--cream); margin-bottom: 16px; }
+  .contact-left .t-body { color: var(--stone); margin-bottom: 36px; }
+
+  .contact-info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: rgba(237,232,223,0.7);
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .contact-link:hover { color: var(--cream); }
+  .contact-link-icon {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(237,232,223,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .contact-link:hover .contact-link-icon {
+    border-color: var(--accent);
+    background: rgba(139,111,78,0.15);
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone);
+    font-weight: 300;
+  }
+  .form-input, .form-textarea {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(237,232,223,0.15);
+    padding: 14px 16px;
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.3s, background 0.3s;
+    resize: none;
+    -webkit-appearance: none;
+  }
+  .form-input::placeholder, .form-textarea::placeholder {
+    color: rgba(237,232,223,0.25);
+  }
+  .form-input:focus, .form-textarea:focus {
+    border-color: var(--accent);
+    background: rgba(255,255,255,0.08);
+  }
+  .form-textarea { min-height: 120px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: var(--accent);
+    color: var(--cream);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 8px;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+  }
+  .btn-primary:hover { background: var(--umber); transform: translateY(-1px); }
+  .btn-primary svg { transition: transform 0.3s; }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  /* ─── FOOTER ──────────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    padding: 32px clamp(24px, 5vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    color: rgba(237,232,223,0.5);
+  }
+  .footer-copy {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: rgba(237,232,223,0.3);
+    font-weight: 300;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .proj-card--large  { grid-column: span 12; }
+    .proj-card--medium { grid-column: span 12; }
+    .proj-card--third  { grid-column: span 6; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-image-wrap { max-width: 380px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero-content { grid-template-columns: 1fr; }
+    .hero-meta { flex-direction: row; align-items: flex-end; }
+    .hero-year { writing-mode: horizontal-tb; transform: none; }
+    .proj-card--third  { grid-column: span 12; }
+    .proj-card--wide .proj-card__img { aspect-ratio: 4/3; }
+    .manual-feature { grid-template-columns: 1fr; }
+    .about-skills { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .section-header { grid-template-columns: auto 1fr; }
+    .section-number { display: none; }
+  }
+  @media (max-width: 480px) {
+    .stats-bar { grid-template-columns: 1fr 1fr; gap: 16px; }
+  }
+
+  /* ─── LOADING SCREEN ──────────────────────────────────── */
+  .loader {
+    position: fixed;
+    inset: 0;
+    background: var(--espresso);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    transition: opacity 0.8s var(--ease), visibility 0.8s;
+  }
+  .loader.hidden { opacity: 0; visibility: hidden; }
+  .loader-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+    color: var(--cream);
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeUp 0.6s var(--ease-out) 0.2s forwards;
+  }
+  .loader-bar-wrap {
+    width: 120px;
+    height: 1px;
+    background: rgba(237,232,223,0.15);
+    overflow: hidden;
+  }
+  .loader-bar {
+    height: 100%;
+    background: var(--accent);
+    width: 0;
+    animation: loadBar 1.5s var(--ease-out) 0.3s forwards;
+  }
+  @keyframes loadBar { to { width: 100%; } }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* horizontal rule divider */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--sand);
+    margin: 0;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ─── LOADER ──────────────────────────────────────────── -->
+<div class="loader" id="loader">
+  <div class="loader-logo">C.M. LUTIVA</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- ─── MOBILE MENU ─────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#projects"  onclick="closeMobile()">Projects</a>
+  <a href="#manual"    onclick="closeMobile()">Manual Works</a>
+  <a href="#about"     onclick="closeMobile()">About</a>
+  <a href="#contact"   onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ─── NAV ─────────────────────────────────────────────── -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">CL</div>
+    Clarise Lutiva
+  </a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#manual">Manual Works</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☽</button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div>
+      <p class="hero-eyebrow">Architectural Portfolio · Philippines</p>
+      <h1 class="hero-name">
+        Clarise<br>
+        <em>Lutiva</em>
+      </h1>
+      <p class="hero-subtitle">Selected Works &nbsp;·&nbsp; 2018 — 2025</p>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-year">2018 — 2025</div>
+      <div class="scroll-hint">
+        <div class="scroll-hint-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS ─────────────────────────────────────────────── -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-number">7+</div>
+    <div class="stat-label">Projects Completed</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-1">
+    <div class="stat-number">6</div>
+    <div class="stat-label">Years of Study</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-2">
+    <div class="stat-number">4</div>
+    <div class="stat-label">Design Disciplines</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-3">
+    <div class="stat-number">∞</div>
+    <div class="stat-label">Design Passion</div>
+  </div>
+</div>
+
+<!-- ─── FEATURED PROJECTS ─────────────────────────────────── -->
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-number">01</span>
+    <div class="section-header-line"></div>
+    <div>
+      <h2 class="section-title">Featured <em>Projects</em></h2>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- Card 1: Ekós -->
+    <div class="proj-card proj-card--large reveal"
+         onclick="openModal('ekos')">
+      <div class="proj-card__overlay"></div>
+      <div class="proj-card__img">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80"
+             alt="Ekós North Triangle" loading="lazy">
+      </div>
+      <div class="proj-card__info">
+        <div>
+          <p class="proj-card__tag">Urban Commercial · Thesis</p>
+          <h3 class="proj-card__title">Ekós — North Triangle</h3>
+          <p class="proj-card__desc">A proposed complex revitalizing urban commercial framework through agritecture. Quezon City, Philippines.</p>
+        </div>
+        <div class="proj-card__year">2023</div>
+      </div>
+    </div>
+
+    <!-- Card 2: Mercado de Bacolor -->
+    <div class="proj-card proj-card--medium reveal reveal-delay-1"
+         onclick="openModal('mercado')">
+      <div class="proj-card__overlay"></div>
+      <div class="proj-card__img">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80"
+             alt="Mercado de Bacolor" loading="lazy">
+      </div>
+      <div class="proj-card__info">
+        <div>
+          <p class="proj-card__tag">Mixed-Use Commercial</p>
+          <h3 class="proj-card__title">Mercado de Bacolor</h3>
+          <p class="proj-card__desc">Colonial-inspired mixed-use development. Bacolor, Pampanga.</p>
+        </div>
+        <div class="proj-card__year">2022</div>
+      </div>
+    </div>
+
+    <!-- Card 3: VE·RB Street Design -->
+    <div class="proj-card proj-card--medium reveal reveal-delay-2"
+         onclick="openModal('verb')">
+      <div class="proj-card__overlay"></div>
+      <div class="proj-card__img">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80"
+             alt="VE·RB Multimodal Street" loading="lazy">
+      </div>
+      <div class="proj-card__info">
+        <div>
+          <p class="proj-card__tag">Urban Design · DSGN 415</p>
+          <h3 class="proj-card__title">VE·RB Street Design</h3>
+          <p class="proj-card__desc">Multimodal downtown throughfare integrating green spaces and active transport.</p>
+        </div>
+        <div class="proj-card__year">2022</div>
+      </div>
+    </div>
+
+    <!-- Card 4: Sukgisan Beach Resort -->
+    <div class="proj-card proj-card--large reveal reveal-delay-1"
+         onclick="openModal('beach')">
+      <div class="proj-card__overlay"></div>
+      <div class="proj-card__img">
+        <img src="https://images.unsplash.com/photo-1439130490301-25e322d88054?w=900&q=80"
+             alt="Sukgisan Beach Resort" loading="lazy">
+      </div>
+      <div class="proj-card__info">
+        <div>
+          <p class="proj-card__tag">Hospitality · Resort Design</p>
+          <h3 class="proj-card__title">Sukgisan Beach Resort</h3>
+          <p class="proj-card__desc">3-Star hotel with specialty restaurant, resort villas, tiny houses & glamping cabins.</p>
+        </div>
+        <div class="proj-card__year">2021</div>
+      </div>
+    </div>
+
+    <!-- Card 5: Backyard Oasis -->
+    <div class="proj-card proj-card--third reveal"
+         onclick="openModal('backyard')">
+      <div class="proj-card__overlay"></div>
+      <div class="proj-card__img">
+        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=500&q=80"
+             alt="Backyard Oasis" loading="lazy">
+      </div>
+      <div class="proj-card__info">
+        <div>
+          <p class="proj-card__tag">Landscape Design</p>
+          <h3 class="proj-card__title">Backyard Oasis</h3>
+          <p class="proj-card__desc">Poolside retreat with lounge, dining & lush greenery.</p>
+        </div>
+        <div class="proj-card__year">2021</div>
+      </div>
+    </div>
+
+    <!-- Card 6: Ikigai Interior -->
+    <div class="proj-card proj-card--third reveal reveal-delay-1"
+         onclick="openModal('ikigai')">
+      <div class="proj-card__overlay"></div>
+      <div class="proj-card__img">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80"
+             alt="Ikigai Oriental Bedroom" loading="lazy">
+      </div>
+      <div class="proj-card__info">
+        <div>
+          <p class="proj-card__tag">Interior Design</p>
+          <h3 class="proj-card__title">Ikigai — Oriental Bedroom</h3>
+          <p class="proj-card__desc">Oriental-style moodboard bedroom design concept.</p>
+        </div>
+        <div class="proj-card__year">2021</div>
+      </div>
+    </div>
+
+    <!-- Card 7: Interior Exercise -->
+    <div class="proj-card proj-card--third reveal reveal-delay-2"
+         onclick="openModal('interior')">
+      <div class="proj-card__overlay"></div>
+      <div class="proj-card__img">
+        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=500&q=80"
+             alt="Interior Design Exercise" loading="lazy">
+      </div>
+      <div class="proj-card__info">
+        <div>
+          <p class="proj-card__tag">Interior Design</p>
+          <h3 class="proj-card__title">Interior Design Exercise</h3>
+          <p class="proj-card__desc">Contemporary living space studies with warm material palette.</p>
+        </div>
+        <div class="proj-card__year">2024</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── MANUAL WORKS ──────────────────────────────────────── -->
+<section id="manual">
+  <div class="section-header reveal">
+    <span class="section-number">02</span>
+    <div class="section-header-line"></div>
+    <div>
+      <h2 class="section-title">Manual <em>Works</em></h2>
+    </div>
+  </div>
+
+  <div class="manual-intro reveal">
+    <p class="t-body">
+      Hand-crafted renderings, perspective drawings, and architectural sketches produced
+      during the formative years of academic study — where every line was drawn with intention.
+    </p>
+  </div>
+
+  <div class="manual-grid">
+
+    <div class="manual-feature reveal">
+      <div class="manual-card">
+        <div class="manual-card__img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+               alt="Cathedral Rendering" loading="lazy">
+        </div>
+        <div class="manual-card__label">Architectural Rendering · Cathedral Study</div>
+      </div>
+      <div class="manual-card">
+        <div class="manual-card__img">
+          <img src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80"
+               alt="Landscape Sketch" loading="lazy">
+        </div>
+        <div class="manual-card__label">Landscape · Visual Tech 112, 2018</div>
+      </div>
+    </div>
+
+    <div class="manual-card reveal">
+      <div class="manual-card__img">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80"
+             alt="Architectural Sketch" loading="lazy">
+      </div>
+      <div class="manual-card__label">Mosque Study · Ink on Paper</div>
+    </div>
+
+    <div class="manual-card reveal reveal-delay-1">
+      <div class="manual-card__img">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&q=80"
+             alt="Residential Rendering" loading="lazy">
+      </div>
+      <div class="manual-card__label">Residential Perspective · Colored Marker</div>
+    </div>
+
+    <div class="manual-card reveal reveal-delay-2">
+      <div class="manual-card__img">
+        <img src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=500&q=80"
+             alt="Urban Sketch" loading="lazy">
+      </div>
+      <div class="manual-card__label">Interior Study · Watercolor & Pen</div>
+    </div>
+
+    <div class="manual-card reveal reveal-delay-3">
+      <div class="manual-card__img">
+        <img src="https://placehold.co/500x300"
+             alt="Building Rendering" loading="lazy">
+      </div>
+      <div class="manual-card__label">Commercial Building Study · 2019</div>
+    </div>
+
+    <div class="manual-card reveal">
+      <div class="manual-card__img">
+        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=500&q=80"
+             alt="Perspective Drawing" loading="lazy">
+      </div>
+      <div class="manual-card__label">Street Perspective · Marker on Paper</div>
+    </div>
+
+    <div class="manual-card reveal reveal-delay-1">
+      <div class="manual-card__img">
+        <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?w=500&q=80"
+             alt="Landscape Plan" loading="lazy">
+      </div>
+      <div class="manual-card__label">Landscape Plan · Colored Pencil</div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top: 40px;">
+    <p class="t-label" style="display:inline-flex;align-items:center;gap:12px;">
+      <span style="display:block;width:32px;height:1px;background:var(--sand)"></span>
+      Manual Works · Academic Period 2018–2020
+      <span style="display:block;width:32px;height:1px;background:var(--sand)"></span>
+    </p>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─────────────────────────────────────────────── -->
+<section id="about">
+  <div class="section-header reveal">
+    <span class="section-number">03</span>
+    <div class="section-header-line"></div>
+    <div>
+      <h2 class="section-title">About <em>Clarise</em></h2>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-image-wrap reveal">
+      <img src="profile.png"
+           alt="Clarise M. Lutiva — Architect">
+    </div>
+
+    <div class="about-text reveal reveal-delay-2">
+      <p class="about-tag">Architect · Designer</p>
+      <h3 class="about-name">Clarise M.<br>Lutiva</h3>
+      <p class="about-title-sub">BS Architecture · Quezon City, Philippines</p>
+
+      <p class="about-bio">
+        Clarise M. Lutiva is an emerging architectural designer based in the Philippines,
+        with a comprehensive portfolio spanning urban commercial development, hospitality,
+        landscape, interior design, and multimodal street planning.
+      </p>
+      <p class="about-bio">
+        Her academic journey — documented through both digital and manual works from 2018
+        to 2025 — reflects a disciplined approach to design thinking, anchored in context,
+        heritage, and human experience. From hand-drawn cathedral renderings to thesis-level
+        urban frameworks, Clarise brings both craft and vision to every project.
+      </p>
+
+      <div class="about-philosophy">
+        <p>"Architecture is not just about shelter — it is about shaping how people move,
+        gather, feel, and belong within a space."</p>
+      </div>
+
+      <div class="about-skills">
+        <div class="skill-item">SketchUp Pro</div>
+        <div class="skill-item">AutoCAD</div>
+        <div class="skill-item">Adobe Photoshop</div>
+        <div class="skill-item">Lumion / Enscape</div>
+        <div class="skill-item">Revit Architecture</div>
+        <div class="skill-item">Hand Rendering</div>
+        <div class="skill-item">Site Planning</div>
+        <div class="skill-item">Interior Design</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ───────────────────────────────────────────── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <p class="t-label" style="color:var(--stone);margin-bottom:16px;">04 — Get in Touch</p>
+      <h2 class="section-title" style="color:var(--cream);margin-bottom:20px;">
+        Let's Build<br><em style="color:var(--accent)">Something</em>
+      </h2>
+      <p class="t-body" style="color:var(--stone);margin-bottom:40px;">
+        Open to architectural collaborations, design commissions, and professional opportunities.
+        Based in Quezon City, Philippines — available for both local and international projects.
+      </p>
+
+      <div class="contact-info">
+        <a href="mailto:clarise.lutiva@email.com" class="contact-link">
+          <div class="contact-link-icon">✉</div>
+          clarise.lutiva@email.com
+        </a>
+        <a href="tel:+639000000000" class="contact-link">
+          <div class="contact-link-icon">✆</div>
+          +63 900 000 0000
+        </a>
+        <a href="#" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          linkedin.com/in/clarisemlutiva
+        </a>
+        <a href="#" class="contact-link">
+          <div class="contact-link-icon">ig</div>
+          @clarise.designs
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal reveal-delay-2">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="Jane">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Doe">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="jane@studio.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Project Type</label>
+          <input type="text" class="form-input" placeholder="Residential / Commercial / Landscape…">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell me about your project…"></textarea>
+        </div>
+        <button class="btn-primary" onclick="handleSubmit(event)">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">C.M. LUTIVA</div>
+  <div class="footer-copy">
+    © <script>document.write(new Date().getFullYear())</script> Clarise M. Lutiva · All rights reserved
+  </div>
+</footer>
+
+<!-- ─── MODALS ────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal">
+    <div class="modal-banner" id="modalBanner">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <img id="modalBannerImg" src="" alt="">
+    </div>
+    <div class="modal-body">
+      <div class="modal-meta" id="modalMeta"></div>
+      <p class="modal-subtitle" id="modalSubtitle"></p>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-gallery" id="modalGallery"></div>
+      <div class="modal-tools" id="modalTools"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SCRIPTS ───────────────────────────────────────────── -->
+<script>
+/* ── Project Data ─────────────────────────────────────── */
+const projects = {
+  ekos: {
+    title: "Ekós — North Triangle, Quezon City",
+    subtitle: "Urban Commercial Framework · Thesis Project",
+    desc: "Ekós (from Eco + Urbis) is a mixed-use commercial complex that aims to expose people from high-density urban areas to a fresher and greener marketplace. The project is located in the Central Business District of Quezon City and consists of several components: the Ekós Towers, Agrimall, Agricentre, Apartments, and Ekós Park — all anchored in a radial site planning concept inspired by the chloroplast.",
+    banner: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
+      "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=600&q=80",
+      "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=600&q=80",
+    ],
+    meta: [
+      { label: "Location", value: "North Triangle, Quezon City" },
+      { label: "Duration", value: "Jan. 28 – Apr. 29, 2023" },
+      { label: "Type", value: "Urban Commercial / Thesis" },
+    ],
+    tools: ["SketchUp Pro", "AutoCAD", "Lumion 10", "Adobe Photoshop"]
+  },
+  mercado: {
+    title: "Mercado de Bacolor",
+    subtitle: "Mixed-Use Commercial Development",
+    desc: "Mercado de Bacolor is a proposed mixed-use commercial development located in Bacolor, Pampanga, which seeks to commemorate the town's rich history through its architecture and public spaces. Drawing inspiration from Spanish Colonial Architecture, the project pays homage to Bacolor's colonial roots while embracing its future. The complex includes a Museum, Indoor Food Bazaar/Resto, Commercial Building, Apartments, Tricycle & Jeepney Terminal, and a Public Park.",
+    banner: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1400&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
+    ],
+    meta: [
+      { label: "Location", value: "Bacolor, Pampanga" },
+      { label: "Type", value: "Mixed-Use Commercial" },
+      { label: "Year", value: "2022" },
+    ],
+    tools: ["SketchUp Pro", "AutoCAD", "Adobe Photoshop"]
+  },
+  verb: {
+    title: "VE·RB — Multimodal Street Design",
+    subtitle: "Downtown Throughfare · DSGN 415",
+    desc: "VE·RB (from Verdant + Urb) is a proposed multimodal street design that integrates green spaces into the traditional urban road layout, providing a refreshing and accessible environment for all. Through careful planning and consideration for accessibility, VE·RB aims to enhance the overall livability and sustainability of the surrounding area while serving as a catalyst for urban regeneration. Features include dedicated bike lanes, wider sidewalks, enhanced public transport infrastructure, solar-powered street lights, and permeable paving.",
+    banner: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&q=80",
+      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=600&q=80",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80",
+    ],
+    meta: [
+      { label: "Duration", value: "Jan. 17–28, 2022" },
+      { label: "Type", value: "Urban Design / Street Planning" },
+      { label: "Course", value: "DSGN 415" },
+    ],
+    tools: ["SketchUp Pro", "AutoCAD", "Enscape", "Adobe Photoshop"]
+  },
+  beach: {
+    title: "Sukgisan Beach Resort",
+    subtitle: "Hospitality Complex · Resort Design",
+    desc: "A full-scale resort development featuring a 3-Star Hotel, Specialty Restaurant, Two-Bedroom Resort Villas, Tiny Houses, Glamping Cabins, and associated amenity structures. The master development plan responds to the natural coastal topography, with structures arranged to maximize ocean views and minimize environmental impact. The design vocabulary draws from vernacular Filipino tropical architecture with contemporary refinements.",
+    banner: "https://images.unsplash.com/photo-1439130490301-25e322d88054?w=1400&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80",
+    ],
+    meta: [
+      { label: "Duration", value: "Jan. 11 – Feb. 18, 2021" },
+      { label: "Type", value: "Hospitality / Resort" },
+      { label: "Year", value: "2021" },
+    ],
+    tools: ["SketchUp Pro", "AutoCAD", "Lumion 10", "Adobe Photoshop"]
+  },
+  backyard: {
+    title: "Backyard Oasis",
+    subtitle: "Landscape & Pool Design",
+    desc: "Sispo Oasis is a backyard landscape design project that transforms an outdoor residential area into a lush retreat. The design incorporates a swimming pool with surrounding lounges, a dining pavilion, pergola structures, and rich tropical planting. The site plan and elevation studies demonstrate a thoughtful approach to outdoor livability in a Philippine tropical climate.",
+    banner: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1400&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=600&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+    ],
+    meta: [
+      { label: "Duration", value: "May 18–25, 2021" },
+      { label: "Type", value: "Landscape Design" },
+      { label: "Year", value: "2021" },
+    ],
+    tools: ["SketchUp Pro", "AutoCAD", "Lumion 10", "Adobe Photoshop"]
+  },
+  ikigai: {
+    title: "Ikigai (生きがい) — Oriental Bedroom",
+    subtitle: "Interior Design · Moodboard Making",
+    desc: "A moodboard and full interior design concept for an Oriental-style bedroom inspired by the Japanese philosophy of Ikigai — the reason for being. The design features traditional shoji screens, dark wood joinery, understated textiles, and a carefully curated material palette of black, white, and natural grains. Rendered through SketchUp, V-Ray, and Photoshop to achieve photorealistic quality.",
+    banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=600&q=80",
+      "https://images.unsplash.com/photo-1616137466211-f939a420be84?w=600&q=80",
+    ],
+    meta: [
+      { label: "Duration", value: "June 16–30, 2021" },
+      { label: "Type", value: "Interior Design" },
+      { label: "Style", value: "Oriental / Japanese" },
+    ],
+    tools: ["SketchUp Pro", "V-Ray", "Adobe Photoshop"]
+  },
+  interior: {
+    title: "Interior Design Exercise",
+    subtitle: "Contemporary Living Space Studies",
+    desc: "A series of contemporary living room design studies exploring the interplay of warm wood, soft neutrals, and natural light. Multiple perspectives and camera angles reveal how the space responds to different times of day. The material palette — linen, oak, marble, and matte black accents — creates a cohesive, editorial-quality interior environment.",
+    banner: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=1400&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=600&q=80",
+    ],
+    meta: [
+      { label: "Type", value: "Interior Design Exercise" },
+      { label: "Year", value: "2024" },
+      { label: "Style", value: "Contemporary / Japandi" },
+    ],
+    tools: ["SketchUp Pro", "AutoCAD", "Enscape", "Adobe Photoshop"]
+  }
+};
+
+/* ── Modal Logic ───────────────────────────────────────── */
+function openModal(key) {
+  const p = projects[key];
+  if (!p) return;
+
+  document.getElementById('modalBannerImg').src = p.banner;
+  document.getElementById('modalTitle').textContent = p.title;
+  document.getElementById('modalSubtitle').textContent = p.subtitle;
+  document.getElementById('modalDesc').textContent = p.desc;
+
+  const meta = document.getElementById('modalMeta');
+  meta.innerHTML = p.meta.map(m =>
+    `<div class="modal-meta-item">
+      <div class="label">${m.label}</div>
+      <div class="value">${m.value}</div>
+    </div>`
+  ).join('');
+
+  const gallery = document.getElementById('modalGallery');
+  gallery.innerHTML = p.gallery.map(src =>
+    `<img src="${src}" alt="" loading="lazy">`
+  ).join('');
+
+  const tools = document.getElementById('modalTools');
+  tools.innerHTML = p.tools.map(t => `<span class="tool-tag">${t}</span>`).join('');
+
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+/* ── Scroll Reveal ─────────────────────────────────────── */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ── Sticky Nav ────────────────────────────────────────── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+});
+
+/* ── Hero Ken Burns ────────────────────────────────────── */
+window.addEventListener('load', () => {
+  document.getElementById('heroBg').classList.add('loaded');
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+  }, 1800);
+});
+
+/* ── Theme Toggle ──────────────────────────────────────── */
+const themeBtn = document.getElementById('themeToggle');
+let dark = false;
+themeBtn.addEventListener('click', () => {
+  dark = !dark;
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+  themeBtn.textContent = dark ? '☀' : '☽';
+});
+
+/* ── Hamburger ─────────────────────────────────────────── */
+const ham = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+function closeMobile() {
+  ham.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+ham.addEventListener('click', () => {
+  const isOpen = ham.classList.toggle('open');
+  mobileMenu.classList.toggle('open', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+/* ── Form Submit ───────────────────────────────────────── */
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.currentTarget;
+  const orig = btn.innerHTML;
+  btn.innerHTML = '✓ &nbsp; Message Sent!';
+  btn.style.background = '#5C4A38';
+  setTimeout(() => {
+    btn.innerHTML = orig;
+    btn.style.background = '';
+  }, 3000);
+}
+
+/* ── Smooth scroll for anchor links ───────────────────── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
