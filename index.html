@@ -14,27 +14,15 @@
     --parchment: #EDE8DF;
     --sand:    #D9CEBB;
     --stone:   #9E9082;
-    --umber:   #5C4A38;
-    --espresso:#2E2018;
-    --ink:     #1A1410;
+   --umber:   #C4A882;
+     --espresso:#E8DDD0;
+    --ink:     #F5F0E8;
     --white:   #FDFCFA;
     --accent:  #8B6F4E;
 
     --nav-h: 72px;
     --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  [data-theme="dark"] {
-    --cream:   #1A1410;
-    --parchment: #231C15;
-    --sand:    #3A2E22;
-    --stone:   #7A6A5A;
-    --umber:   #C4A882;
-    --espresso:#E8DDD0;
-    --ink:     #F5F0E8;
-    --white:   #201810;
-    --accent:  #C4A882;
   }
 
   /* ─── RESET ───────────────────────────────────────────── */
@@ -217,9 +205,14 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background:
-      linear-gradient(to bottom, rgba(26,20,16,0.18) 0%, rgba(26,20,16,0.0) 40%, rgba(26,20,16,0.65) 100%),
-      url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1800&q=80') center/cover no-repeat;
+     background:
+    linear-gradient(
+      to bottom,
+      rgba(10,10,10,0.15) 0%,
+      rgba(10,10,10,0.05) 40%,
+      rgba(10,10,10,0.85) 100%
+    ),
+    url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1800&q=80') center/cover no-repeat;
     transform: scale(1.05);
     transition: transform 8s ease-out;
   }
@@ -230,12 +223,23 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+   background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.05) 0%,
+      rgba(0,0,0,0.15) 40%,
+      rgba(0,0,0,0.75) 100%
+    );
     background-size: 80px 80px;
     pointer-events: none;
   }
+
+  .hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(0.8px);
+}
 
   .hero-content {
     position: relative;
@@ -988,7 +992,7 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☽</button>
+   <!-- <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☽</button> -->
     <button class="hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
