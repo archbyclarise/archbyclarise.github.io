@@ -1439,14 +1439,43 @@
     }
     .nav-links { display: none; }
     .hamburger { display: flex; }
+    /* Solid bar like reference: readable logo + menu over hero */
+    nav {
+      background: var(--cream-dark);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+    nav.scrolled {
+      background: var(--cream-dark);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+    nav .nav-logo {
+      color: var(--white);
+      text-shadow: none;
+    }
+    nav .nav-logo-mark {
+      border-color: rgba(253, 252, 250, 0.82);
+      color: rgba(253, 252, 250, 0.95);
+    }
+    nav .hamburger span {
+      background: rgba(253, 252, 250, 0.95);
+      box-shadow: none;
+    }
     .hero {
+      /* Shorter hero strip (~75% viewport); card stays bottom-aligned inside it */
+      min-height: 75vh;
+      min-height: 75svh;
+      min-height: 75dvh;
       height: auto;
-      min-height: clamp(540px, 78svh, 680px);
-      align-items: flex-start;
-      padding: 82px clamp(14px, 4vw, 24px) 26px;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: env(safe-area-inset-top, 0px) clamp(16px, 5vw, 22px)
+        max(22px, env(safe-area-inset-bottom, 0px));
     }
     .hero-bg {
-      background-position: 56% 26%;
+      background-position: 56% 28%;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     .hero-bg::before {
       background: linear-gradient(
@@ -1462,15 +1491,29 @@
         );
     }
     .hero-content {
-      margin-top: clamp(10px, 2vh, 20px);
+      margin-top: 0;
+      width: 100%;
+      max-width: 28rem;
+      margin-left: auto;
+      margin-right: auto;
     }
     .hero-text {
-      width: min(100%, 430px);
+      width: 100%;
       max-width: 100%;
       border-left: none;
-      border-radius: 8px;
-      border-top: 1px solid rgba(196, 168, 130, 0.35);
-      padding: clamp(16px, 3.6vw, 24px);
+      border-radius: 12px;
+      border: 1px solid rgba(196, 168, 130, 0.32);
+      padding: clamp(18px, 4vw, 26px);
+      background: linear-gradient(
+        165deg,
+        rgba(14, 11, 9, 0.78) 0%,
+        rgba(18, 14, 11, 0.62) 100%
+      );
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow:
+        0 20px 48px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
     .hero-name {
       font-size: clamp(3rem, 13vw, 4.8rem);
@@ -1495,15 +1538,39 @@
       margin: 0;
     }
     .stats-bar {
-      gap: 10px;
-      padding: 30px 16px;
+      gap: 20px 12px;
+      padding: 32px 16px 36px;
+      row-gap: 24px;
+      background: var(--cream);
+      border-top: 1px solid rgba(58, 46, 34, 0.08);
+      scroll-margin-top: calc(var(--nav-h) + 12px);
+      overflow: visible;
+      /* Ensure all four cells are readable: no wait for scroll-reveal, no clipping */
+    }
+    .stats-bar .stat-item.reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .stats-bar .stat-item {
+      min-width: 0;
+      padding: 0 6px;
+      box-sizing: border-box;
     }
     .stat-number {
-      font-size: clamp(1.95rem, 8.5vw, 2.8rem);
+      font-size: clamp(2rem, 9vw, 3rem);
+      color: var(--ink-dark);
     }
     .stat-label {
       font-size: 0.58rem;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
+      line-height: 1.45;
+      color: var(--stone-dark);
+      max-width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
     }
     .portfolio-sheets-intro,
     .manual-intro,
@@ -1633,9 +1700,11 @@
   }
   @media (max-width: 480px) {
     .hero {
-      min-height: 520px;
-      padding-top: 78px;
-      padding-bottom: 22px;
+      min-height: 75vh;
+      min-height: 75svh;
+      min-height: 75dvh;
+      padding: env(safe-area-inset-top, 0px) clamp(12px, 4vw, 20px)
+        max(18px, env(safe-area-inset-bottom, 0px));
     }
     .hero-eyebrow {
       font-size: 0.6rem;
@@ -1669,7 +1738,16 @@
     .about-image-wrap img {
       max-height: 360px;
     }
-    .stats-bar { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stats-bar {
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 10px;
+      row-gap: 22px;
+      padding: 28px 12px 32px;
+    }
+    .stats-bar .stat-label {
+      font-size: 0.54rem;
+      letter-spacing: 0.1em;
+    }
     .section-title {
       font-size: clamp(2rem, 11vw, 2.35rem);
     }
