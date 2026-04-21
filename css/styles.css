@@ -64,7 +64,7 @@
     transition: background 0.4s var(--ease), color 0.4s var(--ease);
     overflow-x: hidden;
   }
-  img { display: block; width: 100%; object-fit: cover; }
+  img { display: block; max-width: 100%; width: 100%; object-fit: cover; }
   a { text-decoration: none; color: inherit; }
   button { cursor: pointer; border: none; background: none; }
 
@@ -1157,9 +1157,11 @@
     gap: clamp(40px, 6vw, 100px);
     align-items: start;
   }
+  /* Never let portrait exceed column — survives stale cache vs global img { width:100% } */
   .about-image-wrap {
     position: relative;
-    max-width: clamp(240px, 30vw, 360px);
+    width: 100%;
+    max-width: min(360px, 88vw);
     margin-inline: auto;
   }
   .about-image-wrap::before {
@@ -1171,12 +1173,15 @@
     z-index: 0;
     pointer-events: none;
   }
-  .about-image-wrap img {
+  .about-image-wrap img,
+  img.about-portrait {
     position: relative;
     z-index: 1;
+    display: block;
     width: 100%;
+    max-width: 100%;
     max-height: 520px;
-    aspect-ratio: 3/4;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: 50% 18%;
     border-radius: 6px;
