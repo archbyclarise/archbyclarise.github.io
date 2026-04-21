@@ -306,10 +306,6 @@
   .hero-content {
     position: relative;
     z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: flex-end;
-    gap: clamp(24px, 5vw, 48px);
     width: 100%;
   }
 
@@ -413,45 +409,6 @@
     margin: 0 10px;
     opacity: 0.55;
     color: rgba(255, 252, 248, 0.5);
-  }
-  .hero-meta {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-    padding-bottom: 8px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
-  }
-  .hero-year {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: rgba(255, 252, 248, 0.72);
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-  }
-  .scroll-hint {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(255, 252, 248, 0.62);
-    font-weight: 400;
-  }
-  .scroll-hint-line {
-    width: 1px; height: 40px;
-    background: rgba(196, 168, 130, 0.45);
-    animation: scrollPulse 2s ease-in-out infinite;
-  }
-
-  
-  @keyframes scrollPulse {
-    0%,100%{opacity:0.3;transform:scaleY(1)}
-    50%{opacity:0.8;transform:scaleY(0.6)}
   }
 
   /* ─── SECTION UTILS ───────────────────────────────────── */
@@ -1389,9 +1346,6 @@
       border-top: 1px solid rgba(196, 168, 130, 0.35);
       padding: clamp(18px, 4vw, 28px);
     }
-    .hero-content { grid-template-columns: 1fr; }
-    .hero-meta { flex-direction: row; align-items: flex-end; }
-    .hero-year { writing-mode: horizontal-tb; transform: none; margin-bottom: 10px; }
     .proj-card--third  { grid-column: span 12; }
     .proj-card--wide .proj-card__img { aspect-ratio: 4/3; }
     .manual-feature { grid-template-columns: 1fr; }
