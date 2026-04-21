@@ -341,3 +341,93 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     }
   });
 });
+
+/* ── Portfolio deck carousel (#portfolio-sheets) ───────── */
+function initPortfolioSlider() {
+  const root = document.getElementById('portfolioSlider');
+  if (!root) return;
+
+  const track = document.getElementById('portfolioSliderTrack');
+  const viewport = document.getElementById('portfolioSliderViewport');
+  const prevBtn = document.getElementById('portfolioSliderPrev');
+  const nextBtn = document.getElementById('portfolioSliderNext');
+  const currentEl = document.getElementById('portfolioSliderCurrent');
+  const captionEl = document.getElementById('portfolioSliderCaption');
+  const progressFill = document.getElementById('portfolioSliderProgress');
+  const slides = Array.from(root.querySelectorAll('.portfolio-slider__slide'));
+  const n = slides.length;
+
+  if (
+    !track ||
+    !viewport ||
+    !prevBtn ||
+    !nextBtn ||
+    !currentEl ||
+    !captionEl ||
+    !progressFill ||
+    n === 0
+  ) {
+    return;
+  }
+
+  let index = 0;
+
+  function pad2(num) {
+    return String(num).padStart(2, '0');
+  }
+
+  function goToSlide(nextIndex) {
+    index = Math.max(0, Math.min(n - 1, nextIndex));
+    track.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
+
+    slides.forEach((slide, j) => {
+      slide.setAttribute('aria-hidden', j === index ? 'false' : 'true');
+    });
+
+    currentEl.textContent = pad2(index + 1);
+    captionEl.textContent = slides[index].getAttribute('data-caption') || '';
+
+    progressFill.style.width = `${((index + 1) / n) * 100}%`;
+
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === n - 1;
+  }
+
+  prevBtn.addEventListener('click', () => goToSlide(index - 1));
+  nextBtn.addEventListener('click', () => goToSlide(index + 1));
+
+  viewport.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      goToSlide(index - 1);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      goToSlide(index + 1);
+    }
+  });
+
+  let touchStartX = null;
+  viewport.addEventListener(
+    'touchstart',
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    },
+    { passive: true }
+  );
+  viewport.addEventListener(
+    'touchend',
+    (e) => {
+      if (touchStartX == null) return;
+      const dx = e.changedTouches[0].screenX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(dx) < 48) return;
+      if (dx < 0) goToSlide(index + 1);
+      else goToSlide(index - 1);
+    },
+    { passive: true }
+  );
+
+  goToSlide(0);
+}
+
+initPortfolioSlider();

@@ -145,7 +145,7 @@
       <p class="hero-pdf-cta">
         <a href="#portfolio-sheets">Browse every spread</a>
         <span class="hero-pdf-cta__sep" aria-hidden="true">·</span>
-        <a href="#portfolio-pdf">Print-ready PDF</a>
+        <a href="#portfolio-pdf">Download PDF</a>
       </p>
     </div>
     <div class="hero-meta">
@@ -178,209 +178,234 @@
   </div>
 </div>
 
-<!-- ─── PORTFOLIO PDF (source document) ───────────────────── -->
-<section id="portfolio-pdf" aria-label="Download print-ready portfolio">
-  <div class="section-header reveal">
-    <span class="section-number">00</span>
-    <div class="section-header-line"></div>
-    <div>
-      <h2 class="section-title">Print &amp; <em>share</em></h2>
+<section id="portfolio-sheets" class="portfolio-sheets" aria-label="Full portfolio, twenty-six spreads">
+  <div class="portfolio-sheets__deck">
+    <div class="section-header reveal">
+      <span class="section-number">26</span>
+      <div class="section-header-line"></div>
+      <div>
+        <h2 class="section-title">The work, <em>in full</em></h2>
+      </div>
     </div>
-  </div>
-
-  <div class="pdf-block reveal">
-    <p class="t-body pdf-intro">
-      Need a single file for a studio review, a printer, or your archive? The full portfolio is here—mirroring the boards in <a href="#portfolio-sheets">The work, in full</a>, spread for spread.
-      Preview in the window below, open in a new tab, or download to keep offline.
+    <p class="t-body portfolio-sheets-intro reveal">
+      Twenty-six spreads—one arc from first impression to final detail. The same sequence as the print portfolio, laid out here so you can linger on each board. Scroll at your own pace; every frame is part of the same narrative.
     </p>
-    <div class="project-crosslinks reveal">
-      <p class="project-crosslinks__label t-label">Explore on this site</p>
-      <p class="project-crosslinks__sub t-body">Pick a project to jump straight to its card—the page will scroll and highlight the entry so you stay oriented.</p>
-      <div data-project-chips></div>
-    </div>
-    <div class="pdf-actions">
-      <a class="btn-primary" href="042525_PORTFOLIO_Lutiva.pdf" target="_blank" rel="noopener">
-        View in new tab
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <path d="M15 3h6v6"/>
-          <path d="M10 14L21 3"/>
-        </svg>
-      </a>
-      <a class="btn-outline" href="042525_PORTFOLIO_Lutiva.pdf" download="042525_PORTFOLIO_Lutiva.pdf">
-        Download
-      </a>
-    </div>
-    <div class="pdf-frame-wrap">
-      <iframe
-        title="Clarise M. Lutiva — print-ready portfolio"
-        src="042525_PORTFOLIO_Lutiva.pdf#view=FitH"
-        loading="lazy"></iframe>
-    </div>
-    <p class="pdf-fallback t-body">
-      Having trouble with the preview?
-      <a href="042525_PORTFOLIO_Lutiva.pdf" target="_blank" rel="noopener">Open the file</a>
-      or use the download button above.
-    </p>
-  </div>
-</section>
 
-<section id="portfolio-sheets" aria-label="Full portfolio, twenty-six spreads">
-  <div class="section-header reveal">
-    <span class="section-number">26</span>
-    <div class="section-header-line"></div>
-    <div>
-      <h2 class="section-title">The work, <em>in full</em></h2>
+    <div class="portfolio-slider reveal" id="portfolioSlider" data-portfolio-slider>
+      <div class="portfolio-slider__chrome">
+        <div class="portfolio-slider__eyebrow t-label">Portfolio deck</div>
+        <div class="portfolio-slider__counter" id="portfolioSliderCounter" aria-live="polite">
+          <span class="portfolio-slider__current" id="portfolioSliderCurrent">01</span>
+          <span class="portfolio-slider__sep">/</span>
+          <span class="portfolio-slider__total">26</span>
+        </div>
+      </div>
+
+      <div class="portfolio-slider__stage">
+        <button type="button" class="portfolio-slider__arrow portfolio-slider__arrow--prev" id="portfolioSliderPrev" aria-controls="portfolioSliderTrack" aria-label="Previous spread">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="portfolio-slider__viewport" role="region" aria-roledescription="carousel" aria-label="Portfolio spreads" tabindex="0" id="portfolioSliderViewport">
+          <div class="portfolio-slider__track" id="portfolioSliderTrack">
+    <article class="portfolio-slider__slide" data-slide-index="0" data-caption="01 · Opening — the invitation" aria-hidden="false">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-01.jpg" alt="Clarise Lutiva portfolio — spread 1 of 26, opening spread" width="2000" height="1545" decoding="async" loading="eager" fetchpriority="high">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="1" data-caption="02 · Framing intent" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-02.jpg" alt="Clarise Lutiva portfolio — spread 2 of 26, introduction" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="2" data-caption="03 · Place &amp; memory" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-03.jpg" alt="Clarise Lutiva portfolio — spread 3 of 26, context" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="3" data-caption="04 · Early gestures" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-04.jpg" alt="Clarise Lutiva portfolio — spread 4 of 26, concept" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="4" data-caption="05 · Volume &amp; void" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-05.jpg" alt="Clarise Lutiva portfolio — spread 5 of 26, spatial study" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="5" data-caption="06 · Light &amp; shadow" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-06.jpg" alt="Clarise Lutiva portfolio — spread 6 of 26, atmosphere" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="6" data-caption="07 · Order &amp; flow" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-07.jpg" alt="Clarise Lutiva portfolio — spread 7 of 26, circulation" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="7" data-caption="08 · Texture &amp; tone" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-08.jpg" alt="Clarise Lutiva portfolio — spread 8 of 26, materiality" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="8" data-caption="09 · Plans in depth" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-09.jpg" alt="Clarise Lutiva portfolio — spread 9 of 26, plan development" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="9" data-caption="10 · Form in elevation" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-10.jpg" alt="Clarise Lutiva portfolio — spread 10 of 26, elevation study" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="10" data-caption="11 · Section &amp; truth" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-11.jpg" alt="Clarise Lutiva portfolio — spread 11 of 26, section" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="11" data-caption="12 · Detail emerging" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-12.jpg" alt="Clarise Lutiva portfolio — spread 12 of 26, detail" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="12" data-caption="13 · Human measure" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-13.jpg" alt="Clarise Lutiva portfolio — spread 13 of 26, scale" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="13" data-caption="14 · Wider lens" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-14.jpg" alt="Clarise Lutiva portfolio — spread 14 of 26, perspective" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="14" data-caption="15 · Systems &amp; site" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-15.jpg" alt="Clarise Lutiva portfolio — spread 15 of 26, integration" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="15" data-caption="16 · Earth &amp; efficiency" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-16.jpg" alt="Clarise Lutiva portfolio — spread 16 of 26, sustainability" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="16" data-caption="17 · Ground &amp; garden" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-17.jpg" alt="Clarise Lutiva portfolio — spread 17 of 26, landscape" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="17" data-caption="18 · Rooms &amp; rituals" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-18.jpg" alt="Clarise Lutiva portfolio — spread 18 of 26, interior" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="18" data-caption="19 · Precision &amp; poetry" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-19.jpg" alt="Clarise Lutiva portfolio — spread 19 of 26, technical" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="19" data-caption="20 · How it comes together" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-20.jpg" alt="Clarise Lutiva portfolio — spread 20 of 26, assembly" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="20" data-caption="21 · Perspectives align" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-21.jpg" alt="Clarise Lutiva portfolio — spread 21 of 26, views" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="21" data-caption="22 · Quiet refinement" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-22.jpg" alt="Clarise Lutiva portfolio — spread 22 of 26, refinement" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="22" data-caption="23 · Synthesis" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-23.jpg" alt="Clarise Lutiva portfolio — spread 23 of 26, synthesis" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="23" data-caption="24 · Resolution" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-24.jpg" alt="Clarise Lutiva portfolio — spread 24 of 26, resolution" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="24" data-caption="25 · Acknowledgements" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-25.jpg" alt="Clarise Lutiva portfolio — spread 25 of 26, acknowledgements" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+    <article class="portfolio-slider__slide" data-slide-index="25" data-caption="26 · The line continues" aria-hidden="true">
+      <figure class="portfolio-slider__figure">
+        <div class="portfolio-slider__frame">
+          <img src="assets/images/pdf-pages/page-26.jpg" alt="Clarise Lutiva portfolio — spread 26 of 26, closing" width="2000" height="1545" decoding="async" loading="lazy" fetchpriority="low">
+        </div>
+      </figure>
+    </article>
+          </div>
+        </div>
+
+        <button type="button" class="portfolio-slider__arrow portfolio-slider__arrow--next" id="portfolioSliderNext" aria-controls="portfolioSliderTrack" aria-label="Next spread">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <p class="portfolio-slider__caption" id="portfolioSliderCaption">01 · Opening — the invitation</p>
+
+      <div class="portfolio-slider__progress" aria-hidden="true">
+        <div class="portfolio-slider__progress-fill" id="portfolioSliderProgress"></div>
+      </div>
+
+      <p class="portfolio-slider__hint t-body">Use the arrows, swipe, or ← → keys to walk through the deck.</p>
     </div>
-  </div>
-  <p class="t-body portfolio-sheets-intro reveal">
-    Twenty-six spreads—one arc from first impression to final detail. The same sequence as the print portfolio, laid out here so you can linger on each board. Scroll at your own pace; every frame is part of the same narrative.
-  </p>
-  <div class="portfolio-sheets-grid">
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-01.jpg" alt="Clarise Lutiva portfolio — spread 1 of 26, opening spread" loading="eager" width="2000" height="1545" decoding="async" fetchpriority="high">
-      </div>
-      <figcaption class="portfolio-sheet__cap">01 · Opening — the invitation</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-02.jpg" alt="Clarise Lutiva portfolio — spread 2 of 26, introduction" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">02 · Framing intent</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-03.jpg" alt="Clarise Lutiva portfolio — spread 3 of 26, context" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">03 · Place & memory</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-04.jpg" alt="Clarise Lutiva portfolio — spread 4 of 26, concept" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">04 · Early gestures</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-05.jpg" alt="Clarise Lutiva portfolio — spread 5 of 26, spatial study" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">05 · Volume & void</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-06.jpg" alt="Clarise Lutiva portfolio — spread 6 of 26, atmosphere" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">06 · Light & shadow</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-07.jpg" alt="Clarise Lutiva portfolio — spread 7 of 26, circulation" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">07 · Order & flow</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-08.jpg" alt="Clarise Lutiva portfolio — spread 8 of 26, materiality" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">08 · Texture & tone</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-09.jpg" alt="Clarise Lutiva portfolio — spread 9 of 26, plan development" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">09 · Plans in depth</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-10.jpg" alt="Clarise Lutiva portfolio — spread 10 of 26, elevation study" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">10 · Form in elevation</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-11.jpg" alt="Clarise Lutiva portfolio — spread 11 of 26, section" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">11 · Section & truth</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-12.jpg" alt="Clarise Lutiva portfolio — spread 12 of 26, detail" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">12 · Detail emerging</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-13.jpg" alt="Clarise Lutiva portfolio — spread 13 of 26, scale" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">13 · Human measure</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-14.jpg" alt="Clarise Lutiva portfolio — spread 14 of 26, perspective" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">14 · Wider lens</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-15.jpg" alt="Clarise Lutiva portfolio — spread 15 of 26, integration" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">15 · Systems & site</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-16.jpg" alt="Clarise Lutiva portfolio — spread 16 of 26, sustainability" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">16 · Earth & efficiency</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-17.jpg" alt="Clarise Lutiva portfolio — spread 17 of 26, landscape" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">17 · Ground & garden</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-18.jpg" alt="Clarise Lutiva portfolio — spread 18 of 26, interior" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">18 · Rooms & rituals</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-19.jpg" alt="Clarise Lutiva portfolio — spread 19 of 26, technical" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">19 · Precision & poetry</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-20.jpg" alt="Clarise Lutiva portfolio — spread 20 of 26, assembly" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">20 · How it comes together</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-21.jpg" alt="Clarise Lutiva portfolio — spread 21 of 26, views" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">21 · Perspectives align</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-22.jpg" alt="Clarise Lutiva portfolio — spread 22 of 26, refinement" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">22 · Quiet refinement</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-23.jpg" alt="Clarise Lutiva portfolio — spread 23 of 26, synthesis" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">23 · Synthesis</figcaption>
-    </figure>
-    <figure class="portfolio-sheet reveal">
-      <div class="portfolio-sheet__frame">
-        <img src="assets/images/pdf-pages/page-24.jpg" alt="Clarise Lutiva portfolio — spread 24 of 26, resolution" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
-      </div>
-      <figcaption class="portfolio-sheet__cap">24 · Resolution</figcaption>
-    </figure>
   </div>
 </section>
 
