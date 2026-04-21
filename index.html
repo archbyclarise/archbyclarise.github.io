@@ -3,983 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clarise M. Lutiva — Architectural Portfolio</title>
+<title>Clarise M. Lutiva | Architectural Portfolio · Philippines</title>
+<meta name="description" content="Portfolio of Clarise M. Lutiva, architectural designer in Quezon City, Philippines: urban commercial, hospitality, landscape, interior design, and street projects (2018–2025).">
+<meta name="keywords" content="Clarise Lutiva, Clarise M. Lutiva, architecture portfolio, Philippines architect, Quezon City, BS Architecture, urban design, interior design, architectural designer">
+<meta name="author" content="Clarise M. Lutiva">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://archbyclarise.github.io/">
+<meta name="theme-color" content="#1A1410">
+<meta name="geo.region" content="PH-00">
+<meta name="geo.placename" content="Quezon City">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_PH">
+<meta property="og:url" content="https://archbyclarise.github.io/">
+<meta property="og:site_name" content="Clarise M. Lutiva">
+<meta property="og:title" content="Clarise M. Lutiva — Architectural Portfolio">
+<meta property="og:description" content="Portfolio of Clarise M. Lutiva, architectural designer in Quezon City, Philippines: urban commercial, hospitality, landscape, interior design, and street projects (2018–2025).">
+<meta property="og:image" content="https://archbyclarise.github.io/assets/images/pdf-pages/page-01.jpg">
+<meta property="og:image:alt" content="Clarise M. Lutiva, architectural designer">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clarise M. Lutiva — Architectural Portfolio">
+<meta name="twitter:description" content="Portfolio of Clarise M. Lutiva, architectural designer in Quezon City, Philippines: urban commercial, hospitality, landscape, interior design, and street projects (2018–2025).">
+<meta name="twitter:image" content="https://archbyclarise.github.io/assets/images/pdf-pages/page-01.jpg">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/images/pdf-pages/page-01.jpg">
+<link rel="alternate" type="application/pdf" href="042525_PORTFOLIO_Lutiva.pdf" title="Clarise M. Lutiva — print-ready portfolio">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>
-  /* ─── TOKENS ──────────────────────────────────────────── */
-  :root {
-    --cream:   #F5F1EC;
-     --cream-dark:   #1A1410;
-    --parchment: #EDE8DF;
-    --sand:    #D9CEBB;
-     --sand-dark:    #3A2E22;
-    --stone:   #9E9082;
-     --stone-dark:   #7A6A5A;
-    --umber:   #C4A882;
-    --espresso:#E8DDD0;
-    --espresso-dark:#2E2018;
-    --ink:     #F5F0E8;
-    --ink-dark:     #1A1410;
-    --white:   #FDFCFA;
-    --accent:  #8B6F4E;
+<link rel="preload" href="assets/images/pdf-pages/page-01.jpg" as="image">
+<link rel="stylesheet" href="css/styles.css">
 
-    --nav-h: 72px;
-    --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  [data-theme="dark"] {
-    --cream:   #1A1410;
-    --parchment: #231C15;
-    --sand:    #3A2E22;
-    --stone:   #7A6A5A;
-    --umber:   #C4A882;
-    --espresso:#E8DDD0;
-    --ink:     #F5F0E8;
-    --white:   #201810;
-    --accent:  #C4A882;
-  }
-
-  /* ─── RESET ───────────────────────────────────────────── */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; font-size: 16px; }
-  body {
-    font-family: 'Jost', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    transition: background 0.4s var(--ease), color 0.4s var(--ease);
-    overflow-x: hidden;
-  }
-  img { display: block; width: 100%; object-fit: cover; }
-  a { text-decoration: none; color: inherit; }
-  button { cursor: pointer; border: none; background: none; }
-
-  /* ─── TYPOGRAPHY ──────────────────────────────────────── */
-  .t-display {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
-  }
-  .t-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    line-height: 1.1;
-  }
-  .t-label {
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--stone);
-  }
-  .t-body {
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    font-size: 0.95rem;
-    line-height: 1.75;
-    color: var(--stone);
-  }
-
-  /* ─── NAV ─────────────────────────────────────────────── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    height: var(--nav-h);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 clamp(24px, 5vw, 80px);
-    transition: background 0.5s var(--ease), backdrop-filter 0.5s, box-shadow 0.5s;
-  }
-  nav.scrolled {
-    background: rgba(26,20,16,0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 1px 0 rgba(92,74,56,0.08);
-  }
-
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
-    color: var(--ink);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .nav-logo-mark {
-    width: 32px; height: 32px;
-    border: 1.5px solid var(--umber);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    color: var(--umber);
-    font-weight: 500;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: clamp(20px, 3vw, 48px);
-    list-style: none;
-  }
-  .nav-links a {
-    font-size: 0.72rem;
-    font-weight: 300;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink);
-    position: relative;
-    opacity: 0.75;
-    transition: opacity 0.3s;
-  }
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -3px; left: 0;
-    width: 0; height: 1px;
-    background: var(--accent);
-    transition: width 0.4s var(--ease);
-  }
-  .nav-links a:hover { opacity: 1; }
-  .nav-links a:hover::after { width: 100%; }
-
-  .nav-right { display: flex; align-items: center; gap: 16px; }
-
-  .theme-toggle {
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    border: 1px solid var(--sand);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--ink);
-    font-size: 0.85rem;
-    transition: border-color 0.3s, background 0.3s;
-  }
-  .theme-toggle:hover { background: var(--sand); }
-
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    padding: 4px;
-  }
-  .hamburger span {
-    display: block;
-    width: 22px; height: 1.5px;
-    background: var(--ink);
-    transition: transform 0.4s var(--ease), opacity 0.3s;
-  }
-  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: var(--cream-dark);
-    z-index: 999;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s var(--ease);
-  }
-  .mobile-menu.open {
-    display: flex;
-    opacity: 1;
-    pointer-events: all;
-  }
-  .mobile-menu a {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--ink);
-    letter-spacing: 0.05em;
-  }
-
-  /* ─── HERO ────────────────────────────────────────────── */
-  .hero {
-    height: 100vh;
-    min-height: 600px;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: clamp(40px, 8vh, 100px) clamp(24px, 5vw, 80px);
-    overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-     background:
-    linear-gradient(
-      to bottom,
-      rgba(10,10,10,0.15) 0%,
-      rgba(10,10,10,0.05) 40%,
-      rgba(10,10,10,0.85) 100%
-    ),
-    url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1800&q=80') center/cover no-repeat;
-    transform: scale(1.05);
-    transition: transform 8s ease-out;
-  }
-  .hero-bg.loaded { transform: scale(1); }
-
-  /* Decorative grid lines */
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-   background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.05) 0%,
-      rgba(0,0,0,0.15) 40%,
-      rgba(0,0,0,0.75) 100%
-    );
-    background-size: 80px 80px;
-    pointer-events: none;
-  }
-
-  .hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(0.8px);
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://archbyclarise.github.io/#website",
+      "url": "https://archbyclarise.github.io/",
+      "name": "Clarise M. Lutiva — Architectural Portfolio",
+      "description": "Portfolio of Clarise M. Lutiva, architectural designer in Quezon City, Philippines: urban commercial, hospitality, landscape, interior design, and street projects (2018–2025).",
+      "inLanguage": "en-PH",
+      "publisher": { "@id": "https://archbyclarise.github.io/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://archbyclarise.github.io/#person",
+      "name": "Clarise M. Lutiva",
+      "givenName": "Clarise",
+      "familyName": "Lutiva",
+      "jobTitle": "Architectural Designer",
+      "url": "https://archbyclarise.github.io/",
+      "image": "https://archbyclarise.github.io/assets/images/pdf-pages/page-01.jpg",
+      "description": "Portfolio of Clarise M. Lutiva, architectural designer in Quezon City, Philippines: urban commercial, hospitality, landscape, interior design, and street projects (2018–2025).",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Quezon City",
+        "addressCountry": "PH"
+      },
+      "knowsAbout": [
+        "Architecture",
+        "Urban design",
+        "Interior design",
+        "Landscape architecture",
+        "Architectural visualization"
+      ]
+    },
+    {
+      "@type": "DigitalDocument",
+      "@id": "https://archbyclarise.github.io/#portfolio-pdf",
+      "name": "Architectural Portfolio — Clarise M. Lutiva",
+      "encodingFormat": "application/pdf",
+      "url": "https://archbyclarise.github.io/042525_PORTFOLIO_Lutiva.pdf",
+      "dateModified": "2025-04-25",
+      "author": { "@id": "https://archbyclarise.github.io/#person" }
+    }
+  ]
 }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: flex-end;
-    gap: 40px;
-    width: 100%;
-  }
-  .hero-eyebrow {
-    font-size: 0.68rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: rgba(237,232,223,0.7);
-    font-weight: 300;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 32px; height: 1px;
-    background: rgba(237,232,223,0.5);
-  }
-  .hero-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: clamp(3.5rem, 9vw, 9rem);
-    line-height: 0.9;
-    color: var(--white);
-    letter-spacing: -0.02em;
-  }
-  .hero-name em {
-    font-style: italic;
-    color: rgba(237,232,223,0.75);
-  }
-  .hero-subtitle {
-    margin-top: 24px;
-    font-size: 0.78rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(237,232,223,0.6);
-    font-weight: 300;
-  }
-  .hero-meta {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-    padding-bottom: 8px;
-  }
-  .hero-year {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: rgba(237,232,223,0.5);
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-  }
-  .scroll-hint {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(237,232,223,0.45);
-    font-weight: 300;
-  }
-  .scroll-hint-line {
-    width: 1px; height: 40px;
-    background: rgba(237,232,223,0.3);
-    animation: scrollPulse 2s ease-in-out infinite;
-  }
-
-  
-  @keyframes scrollPulse {
-    0%,100%{opacity:0.3;transform:scaleY(1)}
-    50%{opacity:0.8;transform:scaleY(0.6)}
-  }
-
-  /* ─── SECTION UTILS ───────────────────────────────────── */
-  section { padding: clamp(80px, 12vh, 140px) clamp(24px, 5vw, 80px); }
-
-  .section-header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: clamp(48px, 8vh, 80px);
-  }
-  .section-header-line {
-    height: 1px;
-    background: var(--sand);
-  }
-  .section-number {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: var(--stone);
-    font-weight: 300;
-  }
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 300;
-    color: var(--ink-dark);
-    letter-spacing: -0.01em;
-    line-height: 1.05;
-  }
-  .section-title em { font-style: italic; color: var(--accent); }
-
-  /* ─── REVEAL ANIMATIONS ───────────────────────────────── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(32px);
-    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
-
-  /* ─── FEATURED PROJECTS ───────────────────────────────── */
-  #projects { background: var(--cream); }
-
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-    row-gap: 24px;
-  }
-
-  .proj-card {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    background: var(--parchment);
-  }
-  .proj-card--large  { grid-column: span 7; }
-  .proj-card--medium { grid-column: span 5; }
-  .proj-card--wide   { grid-column: span 12; }
-  .proj-card--third  { grid-column: span 4; }
-
-  .proj-card__img {
-    aspect-ratio: 4/3;
-    overflow: hidden;
-  }
-  .proj-card--large .proj-card__img  { aspect-ratio: 16/10; }
-  .proj-card--wide .proj-card__img   { aspect-ratio: 21/8; }
-
-  .proj-card__img img {
-    height: 100%;
-    transition: transform 0.8s var(--ease-out);
-  }
-  .proj-card:hover .proj-card__img img {
-    transform: scale(1.06);
-  }
-
-  .proj-card__info {
-    padding: 20px 22px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
-    background: var(--parchment);
-    transition: background 0.3s;
-  }
-  .proj-card:hover .proj-card__info { background: var(--sand); }
-
-  .proj-card__tag {
-    font-size: 0.62rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 400;
-    margin-bottom: 6px;
-  }
-  .proj-card__title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--ink-dark);
-    line-height: 1.2;
-  }
-  .proj-card__desc {
-    font-size: 0.78rem;
-    font-weight: 300;
-    color: var(--stone);
-    line-height: 1.6;
-    margin-top: 4px;
-    max-width: 260px;
-  }
-  .proj-card__year {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    color: var(--sand-dark);
-    white-space: nowrap;
-    line-height: 1;
-    align-self: flex-end;
-  }
-
-  /* Overlay on hover */
-  .proj-card__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(46,32,24,0.0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.4s var(--ease);
-    pointer-events: none;
-  }
-  .proj-card:hover .proj-card__overlay {
-    background: rgba(46,32,24,0.08);
-  }
-
-  /* ─── PROJECT MODAL ───────────────────────────────────── */
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(26,20,16,0.85);
-    z-index: 2000;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s var(--ease);
-    overflow-y: auto;
-    padding: 40px 16px;
-  }
-  .modal-overlay.open {
-    opacity: 1;
-    pointer-events: all;
-  }
-  .modal {
-    background: var(--cream);
-    width: 100%;
-    max-width: 1100px;
-    transform: translateY(40px);
-    transition: transform 0.5s var(--ease-out);
-  }
-  .modal-overlay.open .modal { transform: translateY(0); }
-
-  .modal-banner {
-    width: 100%;
-    height: clamp(240px, 40vw, 520px);
-    overflow: hidden;
-    position: relative;
-  }
-  .modal-banner img { height: 100%; object-fit: cover; }
-  .modal-close {
-    position: absolute;
-    top: 20px; right: 20px;
-    width: 44px; height: 44px;
-    background: rgba(245,241,236,0.9);
-    backdrop-filter: blur(8px);
-    border-radius: 50%;
-    display: flex;align-items:center;justify-content:center;
-    font-size: 1.1rem;
-    color: var(--ink-dark);
-    cursor: pointer;
-    z-index: 10;
-    transition: background 0.3s;
-  }
-  .modal-close:hover { background: var(--sand); }
-
-  .modal-body {
-    padding: clamp(32px, 5vw, 64px);
-  }
-  .modal-meta {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 32px;
-    flex-wrap: wrap;
-  }
-  .modal-meta-item { }
-  .modal-meta-item .label { font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:4px; }
-  .modal-meta-item .value { font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink-dark); }
-
-  .modal-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 300;
-    color: var(--ink-dark);
-    line-height: 1.05;
-    margin-bottom: 12px;
-  }
-  .modal-subtitle {
-    font-size: 0.78rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 28px;
-  }
-  .modal-desc {
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.8;
-    color: var(--stone);
-    max-width: 680px;
-    margin-bottom: 40px;
-  }
-
-  .modal-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 12px;
-  }
-  .modal-gallery img {
-    aspect-ratio: 4/3;
-    object-fit: cover;
-  }
-
-  .modal-tools {
-    margin-top: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .tool-tag {
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    border: 1px solid var(--sand);
-    color: var(--stone);
-    font-weight: 300;
-  }
-
-  /* ─── STATS BAR ───────────────────────────────────────── */
-  .stats-bar {
-    background: var(--espresso);
-    padding: 48px clamp(24px, 5vw, 80px);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .stat-item { text-align: center; }
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 300;
-    color: var(--cream-dark);
-    line-height: 1;
-  }
-  .stat-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--stone);
-    margin-top: 8px;
-    font-weight: 300;
-  }
-
-  /* ─── MANUAL WORKS ────────────────────────────────────── */
-  #manual { background: var(--parchment); }
-
-  .manual-intro {
-    max-width: 580px;
-    margin-bottom: clamp(48px, 8vh, 80px);
-  }
-  .manual-intro .section-title { margin-bottom: 16px; }
-
-  .manual-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 22vw, 300px), 1fr));
-    gap: 16px;
-  }
-  .manual-card {
-    position: relative;
-    overflow: hidden;
-    background: var(--cream);
-    cursor: pointer;
-  }
-  .manual-card__img {
-    aspect-ratio: 4/3;
-    overflow: hidden;
-  }
-  .manual-card__img img {
-    height: 100%;
-    filter: sepia(15%) contrast(0.92) brightness(1.04);
-    transition: transform 0.7s var(--ease-out), filter 0.4s;
-  }
-  .manual-card:hover .manual-card__img img {
-    transform: scale(1.07);
-    filter: sepia(0%) contrast(1) brightness(1);
-  }
-  .manual-card__label {
-    padding: 12px 16px;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--stone);
-    font-weight: 300;
-    background: var(--cream);
-  }
-
-  .manual-feature {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 16px;
-    margin-bottom: 8px;
-  }
-  .manual-feature .manual-card__img { aspect-ratio: 16/9; }
-
-  /* ─── ABOUT ───────────────────────────────────────────── */
-  #about { background: var(--cream); }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: clamp(40px, 6vw, 100px);
-    align-items: start;
-  }
-  .about-image-wrap {
-    position: relative;
-  }
-  .about-image-wrap::before {
-    content: '';
-    position: absolute;
-    top: -16px; left: -16px;
-    right: 16px; bottom: 16px;
-    border: 1px solid var(--sand);
-    z-index: 0;
-    pointer-events: none;
-  }
-  .about-image-wrap img {
-    position: relative;
-    z-index: 1;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  .about-text { padding-top: 12px; }
-  .about-tag {
-    font-size: 0.65rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 400;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .about-tag::before {
-    content: '';
-    display: block;
-    width: 24px; height: 1px;
-    background: var(--accent);
-  }
-
-  .about-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.4rem, 4vw, 3.6rem);
-    font-weight: 300;
-    color: var(--ink);
-    line-height: 1.05;
-    margin-bottom: 8px;
-  }
-  .about-title-sub {
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--stone);
-    font-weight: 300;
-    margin-bottom: 36px;
-  }
-  .about-bio {
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.85;
-    color: var(--stone);
-    margin-bottom: 28px;
-  }
-  .about-philosophy {
-    border-left: 2px solid var(--accent);
-    padding-left: 24px;
-    margin: 32px 0;
-  }
-  .about-philosophy p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--ink-dark);
-    line-height: 1.5;
-  }
-
-  .about-skills {
-    margin-top: 36px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 24px;
-  }
-  .skill-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.78rem;
-    font-weight: 300;
-    color: var(--stone);
-    letter-spacing: 0.05em;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--sand);
-  }
-  .skill-item::before {
-    content: '';
-    display: block;
-    width: 4px; height: 4px;
-    background: var(--accent);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  /* ─── CONTACT ─────────────────────────────────────────── */
-  #contact {
-    background: var(--espresso);
-    padding: clamp(80px, 12vh, 140px) clamp(24px, 5vw, 80px);
-  }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 6vw, 100px);
-    align-items: start;
-  }
-  .contact-left .section-title { color: var(--cream-dark); margin-bottom: 16px; }
-  .contact-left .t-body { color: var(--stone); margin-bottom: 36px; }
-
-  .contact-info { display: flex; flex-direction: column; gap: 20px; }
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    color: var(--cream-dark);
-    font-size: 0.85rem;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    transition: color 0.3s;
-  }
-  .contact-link:hover { color: var(--cream-dark); }
-  .contact-link-icon {
-    width: 36px; height: 36px;
-    border: 1px solid rgba(237,232,223,0.2);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-    transition: border-color 0.3s, background 0.3s;
-  }
-  .contact-link:hover .contact-link-icon {
-    border-color: var(--cream-dark);
-    background: rgba(139,111,78,0.15);
-  }
-
-  .contact-form { display: flex; flex-direction: column; gap: 16px; }
-  .form-group { display: flex; flex-direction: column; gap: 6px; }
-  .form-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--stone);
-    font-weight: 300;
-  }
-  .form-input, .form-textarea {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--cream-dark);
-    padding: 14px 16px;
-    color: var(--cream-dark);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 300;
-    outline: none;
-    transition: border-color 0.3s, background 0.3s;
-    resize: none;
-    -webkit-appearance: none;
-  }
-  .form-input::placeholder, .form-textarea::placeholder {
-    color: rgba(237,232,223,0.25);
-  }
-  .form-input:focus, .form-textarea:focus {
-    border-color: var(--accent);
-    background: rgba(255,255,255,0.08);
-  }
-  .form-textarea { min-height: 120px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 32px;
-    background: var(--accent);
-    color: var(--cream);
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-family: 'Jost', sans-serif;
-    transition: background 0.3s, transform 0.2s;
-    margin-top: 8px;
-    border: none;
-    cursor: pointer;
-    width: fit-content;
-  }
-  .btn-primary:hover { background: var(--umber); transform: translateY(-1px); }
-  .btn-primary svg { transition: transform 0.3s; }
-  .btn-primary:hover svg { transform: translateX(4px); }
-
-  /* ─── FOOTER ──────────────────────────────────────────── */
-  footer {
-    background: var(--ink-dark);
-    padding: 32px clamp(24px, 5vw, 80px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    letter-spacing: 0.12em;
-    color: rgba(237,232,223,0.5);
-  }
-  .footer-copy {
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    color: rgba(237,232,223,0.3);
-    font-weight: 300;
-  }
-
-  /* ─── RESPONSIVE ──────────────────────────────────────── */
-  @media (max-width: 1024px) {
-    .proj-card--large  { grid-column: span 12; }
-    .proj-card--medium { grid-column: span 12; }
-    .proj-card--third  { grid-column: span 6; }
-    .about-grid { grid-template-columns: 1fr; }
-    .about-image-wrap { max-width: 380px; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .stats-bar { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-    .hero-content { grid-template-columns: 1fr; }
-    .hero-meta { flex-direction: row; align-items: flex-end; }
-    .hero-year { writing-mode: horizontal-tb; transform: none; margin-bottom: 10px; }
-    .proj-card--third  { grid-column: span 12; }
-    .proj-card--wide .proj-card__img { aspect-ratio: 4/3; }
-    .manual-feature { grid-template-columns: 1fr; }
-    .about-skills { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .stats-bar { grid-template-columns: repeat(2, 1fr); }
-    .section-header { grid-template-columns: auto 1fr; }
-    .section-number { display: none; }
-  }
-  @media (max-width: 480px) {
-    .stats-bar { grid-template-columns: 1fr 1fr; gap: 16px; }
-  }
-
-  /* ─── LOADING SCREEN ──────────────────────────────────── */
-  .loader {
-    position: fixed;
-    inset: 0;
-    background: var(--espresso-dark);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    transition: opacity 0.8s var(--ease), visibility 0.8s;
-  }
-  .loader.hidden { opacity: 0; visibility: hidden; }
-  .loader-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    letter-spacing: 0.3em;
-    color: var(--cream);
-    font-weight: 300;
-    opacity: 0;
-    animation: fadeUp 0.6s var(--ease-out) 0.2s forwards;
-  }
-  .loader-bar-wrap {
-    width: 120px;
-    height: 1px;
-    background: rgba(237,232,223,0.15);
-    overflow: hidden;
-  }
-  .loader-bar {
-    height: 100%;
-    background: var(--accent);
-    width: 0;
-    animation: loadBar 1.5s var(--ease-out) 0.3s forwards;
-  }
-  @keyframes loadBar { to { width: 100%; } }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* horizontal rule divider */
-  .divider {
-    width: 100%;
-    height: 1px;
-    background: var(--sand);
-    margin: 0;
-  }
-
-</style>
+</script>
 </head>
+
 <body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
 
 <!-- ─── LOADER ──────────────────────────────────────────── -->
 <div class="loader" id="loader">
@@ -989,6 +100,8 @@
 
 <!-- ─── MOBILE MENU ─────────────────────────────────────── -->
 <div class="mobile-menu" id="mobileMenu">
+  <a href="#portfolio-sheets" onclick="closeMobile()">Full portfolio</a>
+  <a href="#portfolio-pdf" onclick="closeMobile()">Print document</a>
   <a href="#projects"  onclick="closeMobile()">Projects</a>
   <a href="#manual"    onclick="closeMobile()">Manual Works</a>
   <a href="#about"     onclick="closeMobile()">About</a>
@@ -997,11 +110,13 @@
 
 <!-- ─── NAV ─────────────────────────────────────────────── -->
 <nav id="nav">
-  <a href="#" class="nav-logo">
+  <a href="#home" class="nav-logo">
     <div class="nav-logo-mark">CL</div>
     Clarise Lutiva
   </a>
   <ul class="nav-links">
+    <li><a href="#portfolio-sheets">Full portfolio</a></li>
+    <li><a href="#portfolio-pdf">Print document</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#manual">Manual Works</a></li>
     <li><a href="#about">About</a></li>
@@ -1015,17 +130,23 @@
   </div>
 </nav>
 
+<main id="main">
 <!-- ─── HERO ─────────────────────────────────────────────── -->
 <section class="hero" id="home">
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-content">
-    <div>
+    <div class="hero-text">
       <p class="hero-eyebrow">Architectural Portfolio · Philippines</p>
       <h1 class="hero-name">
         Clarise<br>
         <em>Lutiva</em>
       </h1>
       <p class="hero-subtitle">Selected Works &nbsp;·&nbsp; 2018 — 2025</p>
+      <p class="hero-pdf-cta">
+        <a href="#portfolio-sheets">Browse every spread</a>
+        <span class="hero-pdf-cta__sep" aria-hidden="true">·</span>
+        <a href="#portfolio-pdf">Print-ready PDF</a>
+      </p>
     </div>
     <div class="hero-meta">
       <div class="hero-year">2018 — 2025</div>
@@ -1057,6 +178,213 @@
   </div>
 </div>
 
+<!-- ─── PORTFOLIO PDF (source document) ───────────────────── -->
+<section id="portfolio-pdf" aria-label="Download print-ready portfolio">
+  <div class="section-header reveal">
+    <span class="section-number">00</span>
+    <div class="section-header-line"></div>
+    <div>
+      <h2 class="section-title">Print &amp; <em>share</em></h2>
+    </div>
+  </div>
+
+  <div class="pdf-block reveal">
+    <p class="t-body pdf-intro">
+      Need a single file for a studio review, a printer, or your archive? The full portfolio is here—mirroring the boards in <a href="#portfolio-sheets">The work, in full</a>, spread for spread.
+      Preview in the window below, open in a new tab, or download to keep offline.
+    </p>
+    <div class="project-crosslinks reveal">
+      <p class="project-crosslinks__label t-label">Explore on this site</p>
+      <p class="project-crosslinks__sub t-body">Pick a project to jump straight to its card—the page will scroll and highlight the entry so you stay oriented.</p>
+      <div data-project-chips></div>
+    </div>
+    <div class="pdf-actions">
+      <a class="btn-primary" href="042525_PORTFOLIO_Lutiva.pdf" target="_blank" rel="noopener">
+        View in new tab
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <path d="M15 3h6v6"/>
+          <path d="M10 14L21 3"/>
+        </svg>
+      </a>
+      <a class="btn-outline" href="042525_PORTFOLIO_Lutiva.pdf" download="042525_PORTFOLIO_Lutiva.pdf">
+        Download
+      </a>
+    </div>
+    <div class="pdf-frame-wrap">
+      <iframe
+        title="Clarise M. Lutiva — print-ready portfolio"
+        src="042525_PORTFOLIO_Lutiva.pdf#view=FitH"
+        loading="lazy"></iframe>
+    </div>
+    <p class="pdf-fallback t-body">
+      Having trouble with the preview?
+      <a href="042525_PORTFOLIO_Lutiva.pdf" target="_blank" rel="noopener">Open the file</a>
+      or use the download button above.
+    </p>
+  </div>
+</section>
+
+<section id="portfolio-sheets" aria-label="Full portfolio, twenty-six spreads">
+  <div class="section-header reveal">
+    <span class="section-number">26</span>
+    <div class="section-header-line"></div>
+    <div>
+      <h2 class="section-title">The work, <em>in full</em></h2>
+    </div>
+  </div>
+  <p class="t-body portfolio-sheets-intro reveal">
+    Twenty-six spreads—one arc from first impression to final detail. The same sequence as the print portfolio, laid out here so you can linger on each board. Scroll at your own pace; every frame is part of the same narrative.
+  </p>
+  <div class="portfolio-sheets-grid">
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-01.jpg" alt="Clarise Lutiva portfolio — spread 1 of 26, opening spread" loading="eager" width="2000" height="1545" decoding="async" fetchpriority="high">
+      </div>
+      <figcaption class="portfolio-sheet__cap">01 · Opening — the invitation</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-02.jpg" alt="Clarise Lutiva portfolio — spread 2 of 26, introduction" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">02 · Framing intent</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-03.jpg" alt="Clarise Lutiva portfolio — spread 3 of 26, context" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">03 · Place & memory</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-04.jpg" alt="Clarise Lutiva portfolio — spread 4 of 26, concept" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">04 · Early gestures</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-05.jpg" alt="Clarise Lutiva portfolio — spread 5 of 26, spatial study" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">05 · Volume & void</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-06.jpg" alt="Clarise Lutiva portfolio — spread 6 of 26, atmosphere" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">06 · Light & shadow</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-07.jpg" alt="Clarise Lutiva portfolio — spread 7 of 26, circulation" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">07 · Order & flow</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-08.jpg" alt="Clarise Lutiva portfolio — spread 8 of 26, materiality" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">08 · Texture & tone</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-09.jpg" alt="Clarise Lutiva portfolio — spread 9 of 26, plan development" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">09 · Plans in depth</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-10.jpg" alt="Clarise Lutiva portfolio — spread 10 of 26, elevation study" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">10 · Form in elevation</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-11.jpg" alt="Clarise Lutiva portfolio — spread 11 of 26, section" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">11 · Section & truth</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-12.jpg" alt="Clarise Lutiva portfolio — spread 12 of 26, detail" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">12 · Detail emerging</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-13.jpg" alt="Clarise Lutiva portfolio — spread 13 of 26, scale" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">13 · Human measure</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-14.jpg" alt="Clarise Lutiva portfolio — spread 14 of 26, perspective" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">14 · Wider lens</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-15.jpg" alt="Clarise Lutiva portfolio — spread 15 of 26, integration" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">15 · Systems & site</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-16.jpg" alt="Clarise Lutiva portfolio — spread 16 of 26, sustainability" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">16 · Earth & efficiency</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-17.jpg" alt="Clarise Lutiva portfolio — spread 17 of 26, landscape" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">17 · Ground & garden</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-18.jpg" alt="Clarise Lutiva portfolio — spread 18 of 26, interior" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">18 · Rooms & rituals</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-19.jpg" alt="Clarise Lutiva portfolio — spread 19 of 26, technical" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">19 · Precision & poetry</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-20.jpg" alt="Clarise Lutiva portfolio — spread 20 of 26, assembly" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">20 · How it comes together</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-21.jpg" alt="Clarise Lutiva portfolio — spread 21 of 26, views" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">21 · Perspectives align</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-22.jpg" alt="Clarise Lutiva portfolio — spread 22 of 26, refinement" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">22 · Quiet refinement</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-23.jpg" alt="Clarise Lutiva portfolio — spread 23 of 26, synthesis" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">23 · Synthesis</figcaption>
+    </figure>
+    <figure class="portfolio-sheet reveal">
+      <div class="portfolio-sheet__frame">
+        <img src="assets/images/pdf-pages/page-24.jpg" alt="Clarise Lutiva portfolio — spread 24 of 26, resolution" loading="lazy" width="2000" height="1545" decoding="async" fetchpriority="low">
+      </div>
+      <figcaption class="portfolio-sheet__cap">24 · Resolution</figcaption>
+    </figure>
+  </div>
+</section>
+
+
 <!-- ─── FEATURED PROJECTS ─────────────────────────────────── -->
 <section id="projects">
   <div class="section-header reveal">
@@ -1067,15 +395,22 @@
     </div>
   </div>
 
+  <div class="project-crosslinks project-crosslinks--tight reveal">
+    <span class="project-crosslinks__hint t-label">Jump to a project</span>
+    <div data-project-chips></div>
+  </div>
+
   <div class="projects-grid">
 
     <!-- Card 1: Ekós -->
     <div class="proj-card proj-card--large reveal"
+         id="project-ekos"
+         data-project="ekos"
          onclick="openModal('ekos')">
       <div class="proj-card__overlay"></div>
       <div class="proj-card__img">
-        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80"
-             alt="Ekós North Triangle" loading="lazy">
+        <img src="assets/images/pdf-pages/page-02.jpg"
+             alt="Ekós North Triangle" loading="lazy" width="1000" height="750">
       </div>
       <div class="proj-card__info">
         <div>
@@ -1089,11 +424,13 @@
 
     <!-- Card 2: Mercado de Bacolor -->
     <div class="proj-card proj-card--medium reveal reveal-delay-1"
+         id="project-mercado"
+         data-project="mercado"
          onclick="openModal('mercado')">
       <div class="proj-card__overlay"></div>
       <div class="proj-card__img">
-        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80"
-             alt="Mercado de Bacolor" loading="lazy">
+        <img src="assets/images/pdf-pages/page-03.jpg"
+             alt="Mercado de Bacolor" loading="lazy" width="1000" height="750">
       </div>
       <div class="proj-card__info">
         <div>
@@ -1107,11 +444,13 @@
 
     <!-- Card 3: VE·RB Street Design -->
     <div class="proj-card proj-card--medium reveal reveal-delay-2"
+         id="project-verb"
+         data-project="verb"
          onclick="openModal('verb')">
       <div class="proj-card__overlay"></div>
       <div class="proj-card__img">
-        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80"
-             alt="VE·RB Multimodal Street" loading="lazy">
+        <img src="assets/images/pdf-pages/page-04.jpg"
+             alt="VE·RB Multimodal Street" loading="lazy" width="1000" height="750">
       </div>
       <div class="proj-card__info">
         <div>
@@ -1125,11 +464,13 @@
 
     <!-- Card 4: Sukgisan Beach Resort -->
     <div class="proj-card proj-card--large reveal reveal-delay-1"
+         id="project-beach"
+         data-project="beach"
          onclick="openModal('beach')">
       <div class="proj-card__overlay"></div>
       <div class="proj-card__img">
-        <img src="https://images.unsplash.com/photo-1439130490301-25e322d88054?w=900&q=80"
-             alt="Sukgisan Beach Resort" loading="lazy">
+        <img src="assets/images/pdf-pages/page-05.jpg"
+             alt="Sukgisan Beach Resort" loading="lazy" width="1000" height="750">
       </div>
       <div class="proj-card__info">
         <div>
@@ -1143,11 +484,13 @@
 
     <!-- Card 5: Backyard Oasis -->
     <div class="proj-card proj-card--third reveal"
+         id="project-backyard"
+         data-project="backyard"
          onclick="openModal('backyard')">
       <div class="proj-card__overlay"></div>
       <div class="proj-card__img">
-        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=500&q=80"
-             alt="Backyard Oasis" loading="lazy">
+        <img src="assets/images/pdf-pages/page-06.jpg"
+             alt="Backyard Oasis" loading="lazy" width="1000" height="750">
       </div>
       <div class="proj-card__info">
         <div>
@@ -1161,11 +504,13 @@
 
     <!-- Card 6: Ikigai Interior -->
     <div class="proj-card proj-card--third reveal reveal-delay-1"
+         id="project-ikigai"
+         data-project="ikigai"
          onclick="openModal('ikigai')">
       <div class="proj-card__overlay"></div>
       <div class="proj-card__img">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80"
-             alt="Ikigai Oriental Bedroom" loading="lazy">
+        <img src="assets/images/pdf-pages/page-07.jpg"
+             alt="Ikigai Oriental Bedroom" loading="lazy" width="1000" height="750">
       </div>
       <div class="proj-card__info">
         <div>
@@ -1179,11 +524,13 @@
 
     <!-- Card 7: Interior Exercise -->
     <div class="proj-card proj-card--third reveal reveal-delay-2"
+         id="project-interior"
+         data-project="interior"
          onclick="openModal('interior')">
       <div class="proj-card__overlay"></div>
       <div class="proj-card__img">
-        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=500&q=80"
-             alt="Interior Design Exercise" loading="lazy">
+        <img src="assets/images/pdf-pages/page-08.jpg"
+             alt="Interior Design Exercise" loading="lazy" width="1000" height="750">
       </div>
       <div class="proj-card__info">
         <div>
@@ -1210,8 +557,7 @@
 
   <div class="manual-intro reveal">
     <p class="t-body">
-      Hand-crafted renderings, perspective drawings, and architectural sketches produced
-      during the formative years of academic study — where every line was drawn with intention.
+      Studies drawn by hand—ink, graphite, and watercolour—where ideas move slowly and the eye learns to see. A curated slice from the larger story; wander <a href="#portfolio-sheets">the full portfolio</a> whenever you want the complete sequence.
     </p>
   </div>
 
@@ -1220,66 +566,66 @@
     <div class="manual-feature reveal">
       <div class="manual-card">
         <div class="manual-card__img">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
-               alt="Cathedral Rendering" loading="lazy">
+          <img src="assets/images/pdf-pages/page-11.jpg"
+               alt="Cathedral Rendering" loading="lazy" width="1000" height="667">
         </div>
-        <div class="manual-card__label">Architectural Rendering · Cathedral Study</div>
+        <div class="manual-card__label">Hand study · depth &amp; section</div>
       </div>
       <div class="manual-card">
         <div class="manual-card__img">
-          <img src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80"
-               alt="Landscape Sketch" loading="lazy">
+          <img src="assets/images/pdf-pages/page-12.jpg"
+               alt="Landscape Sketch" loading="lazy" width="1000" height="667">
         </div>
-        <div class="manual-card__label">Landscape · Visual Tech 112, 2018</div>
+        <div class="manual-card__label">Hand study · detail emerging</div>
       </div>
     </div>
 
     <div class="manual-card reveal">
       <div class="manual-card__img">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80"
-             alt="Architectural Sketch" loading="lazy">
+        <img src="assets/images/pdf-pages/page-13.jpg"
+             alt="Architectural Sketch" loading="lazy" width="1000" height="667">
       </div>
-      <div class="manual-card__label">Mosque Study · Ink on Paper</div>
+      <div class="manual-card__label">Hand study · human scale</div>
     </div>
 
     <div class="manual-card reveal reveal-delay-1">
       <div class="manual-card__img">
-        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&q=80"
-             alt="Residential Rendering" loading="lazy">
+        <img src="assets/images/pdf-pages/page-14.jpg"
+             alt="Residential Rendering" loading="lazy" width="1000" height="667">
       </div>
-      <div class="manual-card__label">Residential Perspective · Colored Marker</div>
+      <div class="manual-card__label">Hand study · wider lens</div>
     </div>
 
     <div class="manual-card reveal reveal-delay-2">
       <div class="manual-card__img">
-        <img src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=500&q=80"
-             alt="Urban Sketch" loading="lazy">
+        <img src="assets/images/pdf-pages/page-15.jpg"
+             alt="Urban Sketch" loading="lazy" width="1000" height="667">
       </div>
-      <div class="manual-card__label">Interior Study · Watercolor & Pen</div>
+      <div class="manual-card__label">Hand study · site &amp; systems</div>
     </div>
 
     <div class="manual-card reveal reveal-delay-3">
       <div class="manual-card__img">
-        <img src="https://placehold.co/500x300"
-             alt="Building Rendering" loading="lazy">
+        <img src="assets/images/pdf-pages/page-16.jpg"
+             alt="Building Rendering" loading="lazy" width="1000" height="667">
       </div>
-      <div class="manual-card__label">Commercial Building Study · 2019</div>
+      <div class="manual-card__label">Hand study · light &amp; earth</div>
     </div>
 
     <div class="manual-card reveal">
       <div class="manual-card__img">
-        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=500&q=80"
-             alt="Perspective Drawing" loading="lazy">
+        <img src="assets/images/pdf-pages/page-17.jpg"
+             alt="Perspective Drawing" loading="lazy" width="1000" height="667">
       </div>
-      <div class="manual-card__label">Street Perspective · Marker on Paper</div>
+      <div class="manual-card__label">Hand study · ground &amp; garden</div>
     </div>
 
     <div class="manual-card reveal reveal-delay-1">
       <div class="manual-card__img">
-        <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?w=500&q=80"
-             alt="Landscape Plan" loading="lazy">
+        <img src="assets/images/pdf-pages/page-18.jpg"
+             alt="Landscape Plan" loading="lazy" width="1000" height="667">
       </div>
-      <div class="manual-card__label">Landscape Plan · Colored Pencil</div>
+      <div class="manual-card__label">Hand study · interior life</div>
     </div>
 
   </div>
@@ -1287,7 +633,7 @@
   <div style="text-align:center; margin-top: 40px;">
     <p class="t-label" style="display:inline-flex;align-items:center;gap:12px;">
       <span style="display:block;width:32px;height:1px;background:var(--sand)"></span>
-      Manual Works · Academic Period 2018–2020
+      On paper · formative years, 2018–2020
       <span style="display:block;width:32px;height:1px;background:var(--sand)"></span>
     </p>
   </div>
@@ -1305,8 +651,8 @@
 
   <div class="about-grid">
     <div class="about-image-wrap reveal">
-      <img src="profile.png"
-           alt="Clarise M. Lutiva — Architect">
+      <img src="assets/images/pdf-pages/page-02.jpg"
+           alt="Clarise M. Lutiva — Architect" width="900" height="1200">
     </div>
 
     <div class="about-text reveal reveal-delay-2">
@@ -1413,11 +759,13 @@
   </div>
 </section>
 
+</main>
+
 <!-- ─── FOOTER ────────────────────────────────────────────── -->
 <footer>
   <div class="footer-logo">C.M. LUTIVA</div>
   <div class="footer-copy">
-    © <script>document.write(new Date().getFullYear())</script> Clarise M. Lutiva · All rights reserved
+    © <time datetime="2026">2026</time> Clarise M. Lutiva · All rights reserved
   </div>
 </footer>
 
@@ -1439,242 +787,6 @@
   </div>
 </div>
 
-<!-- ─── SCRIPTS ───────────────────────────────────────────── -->
-<script>
-/* ── Project Data ─────────────────────────────────────── */
-const projects = {
-  ekos: {
-    title: "Ekós — North Triangle, Quezon City",
-    subtitle: "Urban Commercial Framework · Thesis Project",
-    desc: "Ekós (from Eco + Urbis) is a mixed-use commercial complex that aims to expose people from high-density urban areas to a fresher and greener marketplace. The project is located in the Central Business District of Quezon City and consists of several components: the Ekós Towers, Agrimall, Agricentre, Apartments, and Ekós Park — all anchored in a radial site planning concept inspired by the chloroplast.",
-    banner: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
-      "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=600&q=80",
-      "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=600&q=80",
-    ],
-    meta: [
-      { label: "Location", value: "North Triangle, Quezon City" },
-      { label: "Duration", value: "Jan. 28 – Apr. 29, 2023" },
-      { label: "Type", value: "Urban Commercial / Thesis" },
-    ],
-    tools: ["SketchUp Pro", "AutoCAD", "Lumion 10", "Adobe Photoshop"]
-  },
-  mercado: {
-    title: "Mercado de Bacolor",
-    subtitle: "Mixed-Use Commercial Development",
-    desc: "Mercado de Bacolor is a proposed mixed-use commercial development located in Bacolor, Pampanga, which seeks to commemorate the town's rich history through its architecture and public spaces. Drawing inspiration from Spanish Colonial Architecture, the project pays homage to Bacolor's colonial roots while embracing its future. The complex includes a Museum, Indoor Food Bazaar/Resto, Commercial Building, Apartments, Tricycle & Jeepney Terminal, and a Public Park.",
-    banner: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1400&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
-    ],
-    meta: [
-      { label: "Location", value: "Bacolor, Pampanga" },
-      { label: "Type", value: "Mixed-Use Commercial" },
-      { label: "Year", value: "2022" },
-    ],
-    tools: ["SketchUp Pro", "AutoCAD", "Adobe Photoshop"]
-  },
-  verb: {
-    title: "VE·RB — Multimodal Street Design",
-    subtitle: "Downtown Throughfare · DSGN 415",
-    desc: "VE·RB (from Verdant + Urb) is a proposed multimodal street design that integrates green spaces into the traditional urban road layout, providing a refreshing and accessible environment for all. Through careful planning and consideration for accessibility, VE·RB aims to enhance the overall livability and sustainability of the surrounding area while serving as a catalyst for urban regeneration. Features include dedicated bike lanes, wider sidewalks, enhanced public transport infrastructure, solar-powered street lights, and permeable paving.",
-    banner: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&q=80",
-      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=600&q=80",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80",
-    ],
-    meta: [
-      { label: "Duration", value: "Jan. 17–28, 2022" },
-      { label: "Type", value: "Urban Design / Street Planning" },
-      { label: "Course", value: "DSGN 415" },
-    ],
-    tools: ["SketchUp Pro", "AutoCAD", "Enscape", "Adobe Photoshop"]
-  },
-  beach: {
-    title: "Sukgisan Beach Resort",
-    subtitle: "Hospitality Complex · Resort Design",
-    desc: "A full-scale resort development featuring a 3-Star Hotel, Specialty Restaurant, Two-Bedroom Resort Villas, Tiny Houses, Glamping Cabins, and associated amenity structures. The master development plan responds to the natural coastal topography, with structures arranged to maximize ocean views and minimize environmental impact. The design vocabulary draws from vernacular Filipino tropical architecture with contemporary refinements.",
-    banner: "https://images.unsplash.com/photo-1439130490301-25e322d88054?w=1400&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600&q=80",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80",
-    ],
-    meta: [
-      { label: "Duration", value: "Jan. 11 – Feb. 18, 2021" },
-      { label: "Type", value: "Hospitality / Resort" },
-      { label: "Year", value: "2021" },
-    ],
-    tools: ["SketchUp Pro", "AutoCAD", "Lumion 10", "Adobe Photoshop"]
-  },
-  backyard: {
-    title: "Backyard Oasis",
-    subtitle: "Landscape & Pool Design",
-    desc: "Sispo Oasis is a backyard landscape design project that transforms an outdoor residential area into a lush retreat. The design incorporates a swimming pool with surrounding lounges, a dining pavilion, pergola structures, and rich tropical planting. The site plan and elevation studies demonstrate a thoughtful approach to outdoor livability in a Philippine tropical climate.",
-    banner: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1400&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=600&q=80",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
-    ],
-    meta: [
-      { label: "Duration", value: "May 18–25, 2021" },
-      { label: "Type", value: "Landscape Design" },
-      { label: "Year", value: "2021" },
-    ],
-    tools: ["SketchUp Pro", "AutoCAD", "Lumion 10", "Adobe Photoshop"]
-  },
-  ikigai: {
-    title: "Ikigai (生きがい) — Oriental Bedroom",
-    subtitle: "Interior Design · Moodboard Making",
-    desc: "A moodboard and full interior design concept for an Oriental-style bedroom inspired by the Japanese philosophy of Ikigai — the reason for being. The design features traditional shoji screens, dark wood joinery, understated textiles, and a carefully curated material palette of black, white, and natural grains. Rendered through SketchUp, V-Ray, and Photoshop to achieve photorealistic quality.",
-    banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=600&q=80",
-      "https://images.unsplash.com/photo-1616137466211-f939a420be84?w=600&q=80",
-    ],
-    meta: [
-      { label: "Duration", value: "June 16–30, 2021" },
-      { label: "Type", value: "Interior Design" },
-      { label: "Style", value: "Oriental / Japanese" },
-    ],
-    tools: ["SketchUp Pro", "V-Ray", "Adobe Photoshop"]
-  },
-  interior: {
-    title: "Interior Design Exercise",
-    subtitle: "Contemporary Living Space Studies",
-    desc: "A series of contemporary living room design studies exploring the interplay of warm wood, soft neutrals, and natural light. Multiple perspectives and camera angles reveal how the space responds to different times of day. The material palette — linen, oak, marble, and matte black accents — creates a cohesive, editorial-quality interior environment.",
-    banner: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=1400&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80",
-      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=600&q=80",
-    ],
-    meta: [
-      { label: "Type", value: "Interior Design Exercise" },
-      { label: "Year", value: "2024" },
-      { label: "Style", value: "Contemporary / Japandi" },
-    ],
-    tools: ["SketchUp Pro", "AutoCAD", "Enscape", "Adobe Photoshop"]
-  }
-};
-
-/* ── Modal Logic ───────────────────────────────────────── */
-function openModal(key) {
-  const p = projects[key];
-  if (!p) return;
-
-  document.getElementById('modalBannerImg').src = p.banner;
-  document.getElementById('modalTitle').textContent = p.title;
-  document.getElementById('modalSubtitle').textContent = p.subtitle;
-  document.getElementById('modalDesc').textContent = p.desc;
-
-  const meta = document.getElementById('modalMeta');
-  meta.innerHTML = p.meta.map(m =>
-    `<div class="modal-meta-item">
-      <div class="label">${m.label}</div>
-      <div class="value">${m.value}</div>
-    </div>`
-  ).join('');
-
-  const gallery = document.getElementById('modalGallery');
-  gallery.innerHTML = p.gallery.map(src =>
-    `<img src="${src}" alt="" loading="lazy">`
-  ).join('');
-
-  const tools = document.getElementById('modalTools');
-  tools.innerHTML = p.tools.map(t => `<span class="tool-tag">${t}</span>`).join('');
-
-  document.getElementById('modalOverlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  document.getElementById('modalOverlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function handleOverlayClick(e) {
-  if (e.target === document.getElementById('modalOverlay')) closeModal();
-}
-
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
-
-/* ── Scroll Reveal ─────────────────────────────────────── */
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      revealObserver.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-/* ── Sticky Nav ────────────────────────────────────────── */
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 80);
-});
-
-/* ── Hero Ken Burns ────────────────────────────────────── */
-window.addEventListener('load', () => {
-  document.getElementById('heroBg').classList.add('loaded');
-  setTimeout(() => {
-    document.getElementById('loader').classList.add('hidden');
-  }, 1800);
-});
-
-/* ── Theme Toggle ──────────────────────────────────────── */
-const themeBtn = document.getElementById('themeToggle');
-let dark = false;
-themeBtn.addEventListener('click', () => {
-  dark = !dark;
-  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
-  themeBtn.textContent = dark ? '☀' : '☽';
-});
-
-/* ── Hamburger ─────────────────────────────────────────── */
-const ham = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-function closeMobile() {
-  ham.classList.remove('open');
-  mobileMenu.classList.remove('open');
-  document.body.style.overflow = '';
-}
-ham.addEventListener('click', () => {
-  const isOpen = ham.classList.toggle('open');
-  mobileMenu.classList.toggle('open', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
-});
-
-/* ── Form Submit ───────────────────────────────────────── */
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.currentTarget;
-  const orig = btn.innerHTML;
-  btn.innerHTML = '✓ &nbsp; Message Sent!';
-  btn.style.background = '#5C4A38';
-  setTimeout(() => {
-    btn.innerHTML = orig;
-    btn.style.background = '';
-  }, 3000);
-}
-
-/* ── Smooth scroll for anchor links ───────────────────── */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-</script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
