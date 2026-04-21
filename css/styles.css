@@ -416,10 +416,13 @@
 
   .section-header {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 24px;
     margin-bottom: clamp(48px, 8vh, 80px);
+  }
+  .section-header > :last-child {
+    grid-column: 1 / -1;
   }
   .section-header-line {
     height: 1px;
@@ -1406,8 +1409,45 @@
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
+    section {
+      padding: clamp(64px, 10vh, 96px) clamp(20px, 5vw, 28px);
+    }
+    nav {
+      height: 64px;
+      padding: 0 16px;
+    }
+    .nav-logo {
+      font-size: 1.02rem;
+      letter-spacing: 0.06em;
+      gap: 8px;
+    }
+    .nav-logo-mark {
+      width: 30px;
+      height: 30px;
+      font-size: 0.68rem;
+    }
+    .mobile-menu {
+      gap: 20px;
+      padding: 80px 24px 32px;
+      justify-content: flex-start;
+      text-align: center;
+    }
+    .mobile-menu a {
+      font-size: clamp(1.5rem, 8vw, 2rem);
+      letter-spacing: 0.04em;
+      line-height: 1.15;
+    }
     .nav-links { display: none; }
     .hamburger { display: flex; }
+    .hero {
+      height: auto;
+      min-height: clamp(540px, 78svh, 680px);
+      align-items: flex-start;
+      padding: 82px clamp(14px, 4vw, 24px) 26px;
+    }
+    .hero-bg {
+      background-position: 56% 26%;
+    }
     .hero-bg::before {
       background: linear-gradient(
           180deg,
@@ -1421,16 +1461,114 @@
           rgba(12, 10, 8, 0.45) 100%
         );
     }
+    .hero-content {
+      margin-top: clamp(10px, 2vh, 20px);
+    }
     .hero-text {
+      width: min(100%, 430px);
       max-width: 100%;
       border-left: none;
       border-radius: 8px;
       border-top: 1px solid rgba(196, 168, 130, 0.35);
-      padding: clamp(18px, 4vw, 28px);
+      padding: clamp(16px, 3.6vw, 24px);
+    }
+    .hero-name {
+      font-size: clamp(3rem, 13vw, 4.8rem);
+    }
+    .hero-subtitle {
+      margin-top: 16px;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+    }
+    .hero-pdf-cta {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: center;
+    }
+    .hero-pdf-cta a {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+    }
+    .hero-pdf-cta__sep {
+      margin: 0;
+    }
+    .stats-bar {
+      gap: 10px;
+      padding: 30px 16px;
+    }
+    .stat-number {
+      font-size: clamp(1.95rem, 8.5vw, 2.8rem);
+    }
+    .stat-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+    }
+    .portfolio-sheets-intro,
+    .manual-intro,
+    .pdf-intro,
+    .about-bio {
+      font-size: 0.92rem;
+      line-height: 1.72;
+    }
+    .portfolio-slider {
+      padding: 12px;
+    }
+    .portfolio-slider__chrome {
+      margin-bottom: 14px;
+      gap: 8px;
+    }
+    .portfolio-slider__counter {
+      font-size: 1.28rem;
+    }
+    .portfolio-slider__caption {
+      margin-top: 14px;
+      font-size: 0.98rem;
+      min-height: auto;
+    }
+    .portfolio-slider__hint {
+      font-size: 0.74rem;
+      margin-top: 12px;
+    }
+    .projects-grid {
+      gap: 14px;
+      row-gap: 16px;
+    }
+    .proj-card__info {
+      padding: 14px 14px 16px;
+      gap: 10px;
+    }
+    .proj-card__title {
+      font-size: 1.16rem;
+    }
+    .proj-card__desc {
+      font-size: 0.74rem;
+      line-height: 1.5;
+      margin-top: 3px;
+    }
+    .proj-card__year {
+      font-size: 1.4rem;
     }
     .proj-card--third  { grid-column: span 12; }
     .proj-card--wide .proj-card__img { aspect-ratio: 4/3; }
-    .manual-feature { grid-template-columns: 1fr; }
+    .manual-intro {
+      margin-bottom: clamp(26px, 4vh, 40px);
+    }
+    .manual-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .manual-feature {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 0;
+    }
+    .manual-card__label {
+      padding: 10px 12px;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+    }
     .about-image-wrap {
       max-width: 280px;
       margin-inline: auto;
@@ -1446,12 +1584,79 @@
       object-position: 50% 14%;
     }
     .about-skills { grid-template-columns: 1fr; }
+    .about-title-sub {
+      margin-bottom: 26px;
+    }
+    .about-philosophy {
+      margin: 24px 0;
+      padding-left: 14px;
+    }
+    .about-philosophy p {
+      font-size: 1.16rem;
+    }
+    .contact-left .section-title {
+      margin-bottom: 12px;
+    }
+    .contact-form {
+      padding: 18px;
+    }
+    .contact-link {
+      padding: 9px 0;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+    }
+    .contact-link-icon {
+      width: 24px;
+      height: 24px;
+      font-size: 0.62rem;
+    }
+    .btn-primary {
+      width: 100%;
+      justify-content: center;
+    }
     .form-row { grid-template-columns: 1fr; }
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
-    .section-header { grid-template-columns: auto 1fr; }
+    .section-header {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: clamp(24px, 4.5vh, 38px);
+      justify-items: start;
+    }
+    .section-header-line {
+      display: none;
+    }
+    .section-title {
+      font-size: clamp(2.2rem, 10vw, 3rem);
+      line-height: 1.03;
+    }
     .section-number { display: none; }
   }
   @media (max-width: 480px) {
+    .hero {
+      min-height: 520px;
+      padding-top: 78px;
+      padding-bottom: 22px;
+    }
+    .hero-eyebrow {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 12px;
+      gap: 8px;
+    }
+    .hero-eyebrow::before {
+      width: 24px;
+    }
+    .hero-name {
+      font-size: clamp(2.6rem, 13.5vw, 4.1rem);
+    }
+    .hero-subtitle {
+      font-size: 0.64rem;
+      letter-spacing: 0.16em;
+    }
+    .hero-pdf-cta a {
+      font-size: 0.64rem;
+      letter-spacing: 0.1em;
+    }
     .about-image-wrap {
       max-width: 240px;
     }
@@ -1465,6 +1670,9 @@
       max-height: 360px;
     }
     .stats-bar { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .section-title {
+      font-size: clamp(2rem, 11vw, 2.35rem);
+    }
   }
 
   /* ─── LOADING SCREEN ──────────────────────────────────── */
