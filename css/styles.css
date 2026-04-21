@@ -1153,18 +1153,20 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 0.9fr 1.2fr;
     gap: clamp(40px, 6vw, 100px);
     align-items: start;
   }
   .about-image-wrap {
     position: relative;
+    max-width: clamp(240px, 30vw, 360px);
+    margin-inline: auto;
   }
   .about-image-wrap::before {
     content: '';
     position: absolute;
-    top: -16px; left: -16px;
-    right: 16px; bottom: 16px;
+    top: -10px; left: -10px;
+    right: 10px; bottom: 10px;
     border: 1px solid var(--sand);
     z-index: 0;
     pointer-events: none;
@@ -1172,9 +1174,13 @@
   .about-image-wrap img {
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-height: 520px;
     aspect-ratio: 3/4;
     object-fit: cover;
-    object-position: top;
+    object-position: 50% 18%;
+    border-radius: 6px;
+    box-shadow: 0 20px 40px rgba(26, 20, 16, 0.14);
   }
 
   .about-text { padding-top: 12px; }
@@ -1390,7 +1396,7 @@
     .proj-card--medium { grid-column: span 12; }
     .proj-card--third  { grid-column: span 6; }
     .about-grid { grid-template-columns: 1fr; }
-    .about-image-wrap { max-width: 380px; }
+    .about-image-wrap { max-width: 320px; }
     .contact-grid { grid-template-columns: 1fr; }
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
   }
@@ -1420,6 +1426,20 @@
     .proj-card--third  { grid-column: span 12; }
     .proj-card--wide .proj-card__img { aspect-ratio: 4/3; }
     .manual-feature { grid-template-columns: 1fr; }
+    .about-image-wrap {
+      max-width: 280px;
+      margin-inline: auto;
+    }
+    .about-image-wrap::before {
+      top: -8px;
+      left: -8px;
+      right: 8px;
+      bottom: 8px;
+    }
+    .about-image-wrap img {
+      max-height: 430px;
+      object-position: 50% 14%;
+    }
     .about-skills { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
@@ -1427,6 +1447,18 @@
     .section-number { display: none; }
   }
   @media (max-width: 480px) {
+    .about-image-wrap {
+      max-width: 240px;
+    }
+    .about-image-wrap::before {
+      top: -6px;
+      left: -6px;
+      right: 6px;
+      bottom: 6px;
+    }
+    .about-image-wrap img {
+      max-height: 360px;
+    }
     .stats-bar { grid-template-columns: 1fr 1fr; gap: 16px; }
   }
 
